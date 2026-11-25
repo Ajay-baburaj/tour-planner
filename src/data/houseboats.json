@@ -1,0 +1,85 @@
+[
+  {
+    "name": "Punnamada Day Cruiser",
+    "type": "Deluxe",
+    "base": "Alleppey",
+    "image": "boat",
+    "bedrooms": 1,
+    "guests": 4,
+    "price": 7700,
+    "cruises": [
+      "Day cruise"
+    ],
+    "description": "Follow the lake edge and the Kuttanad canals, with lunch aboard and return to the same jetty."
+  },
+  {
+    "name": "Kuttanad Palm Cabin",
+    "type": "Honeymoon",
+    "base": "Alleppey",
+    "image": "hero",
+    "bedrooms": 1,
+    "guests": 2,
+    "price": 14500,
+    "cruises": [
+      "Overnight"
+    ],
+    "description": "A private cabin for two, a shaded deck and dinner after the crew has moored the boat."
+  },
+  {
+    "name": "Vembanad Veranda",
+    "type": "Premium",
+    "base": "Kumarakom",
+    "image": "water",
+    "bedrooms": 2,
+    "guests": 4,
+    "price": 19900,
+    "cruises": [
+      "Day cruise",
+      "Overnight"
+    ],
+    "description": "Leave from Kumarakom for a mix of open lake and narrower canals, with two cabins for a small group."
+  },
+  {
+    "name": "Paddy Fields Passage",
+    "type": "Deluxe",
+    "base": "Alleppey",
+    "image": "boat",
+    "bedrooms": 3,
+    "guests": 6,
+    "price": 21900,
+    "cruises": [
+      "Overnight",
+      "Multi-day"
+    ],
+    "description": "Three cabins, a simple upper sitting area and a route through the Kuttanad paddy belt."
+  },
+  {
+    "name": "Lake at Dusk",
+    "type": "Luxury",
+    "base": "Kumarakom",
+    "image": "hero",
+    "bedrooms": 2,
+    "guests": 4,
+    "price": 28900,
+    "cruises": [
+      "Overnight",
+      "Multi-day"
+    ],
+    "description": "An enclosed dining lounge and open deck with room to watch dusk settle over Vembanad."
+  },
+  {
+    "name": "Kumarakom Family Kettuvallam",
+    "type": "Premium",
+    "base": "Kumarakom",
+    "image": "water",
+    "bedrooms": 4,
+    "guests": 8,
+    "price": 31900,
+    "cruises": [
+      "Day cruise",
+      "Overnight",
+      "Multi-day"
+    ],
+    "description": "Four cabins for a larger family, a shared dining deck and meal options arranged with the crew."
+  }
+]

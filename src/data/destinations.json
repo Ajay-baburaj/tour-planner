@@ -1,0 +1,353 @@
+[
+  {
+    "slug": "munnar",
+    "name": "Munnar",
+    "malayalam": "മൂന്നാർ",
+    "region": "Idukki · Western Ghats",
+    "image": "tea",
+    "km": 110,
+    "season": "September–March",
+    "summary": "Tea gardens fold around the ridges of the Western Ghats. Start early along the estate roads, when passing mist lifts to reveal the valley below.",
+    "attractions": [
+      {
+        "title": "Tea Museum",
+        "text": "Learn how the leaves are rolled and dried"
+      },
+      {
+        "title": "Mattupetty Dam",
+        "text": "Walk the basin and look for birds on the far shore"
+      },
+      {
+        "title": "Eravikulam National Park",
+        "text": "Reserve the park shuttle and watch for Nilgiri tahr on the slopes"
+      }
+    ],
+    "stay": "Pick a hillside bungalow on the quieter Pallivasal road for valley views.",
+    "lat": 10.0892,
+    "lon": 77.0597
+  },
+  {
+    "slug": "alleppey",
+    "name": "Alleppey",
+    "malayalam": "ആലപ്പുഴ",
+    "region": "Alappuzha · Backwaters",
+    "image": "boat",
+    "km": 85,
+    "season": "October–March",
+    "summary": "Kuttanad’s canals thread through paddy fields, ferry landings and reed-covered banks. A small canoe reaches the village waterways that a larger houseboat has to pass by.",
+    "attractions": [
+      {
+        "title": "Punnamada Lake",
+        "text": "Watch the practice lanes during snake-boat season"
+      },
+      {
+        "title": "Kuttanad canals",
+        "text": "Take a dawn canoe past the rice fields"
+      },
+      {
+        "title": "Alappuzha Beach",
+        "text": "Walk the seafront near the old pier"
+      }
+    ],
+    "stay": "Choose a canal-side homestay or a private overnight kettuvallam.",
+    "lat": 9.4981,
+    "lon": 76.3388
+  },
+  {
+    "slug": "kumarakom",
+    "name": "Kumarakom",
+    "malayalam": "കുമരകം",
+    "region": "Kottayam · Vembanad Lake",
+    "image": "water",
+    "km": 79,
+    "season": "November–February",
+    "summary": "Kumarakom looks west across Vembanad. The air is coolest on the wetland paths around dawn, when cormorants and egrets start feeding.",
+    "attractions": [
+      {
+        "title": "Kumarakom Bird Sanctuary",
+        "text": "Walk the shaded wetland trails early"
+      },
+      {
+        "title": "Vembanad Lake",
+        "text": "Cruise into open water at dusk"
+      },
+      {
+        "title": "Village lanes",
+        "text": "Visit a local coir weaving household by arrangement"
+      }
+    ],
+    "stay": "Stay in a small lakeside property with its own jetty.",
+    "lat": 9.5916,
+    "lon": 76.5222
+  },
+  {
+    "slug": "thekkady",
+    "name": "Thekkady",
+    "malayalam": "തേക്കടി",
+    "region": "Idukki · Periyar",
+    "image": "periyar",
+    "km": 145,
+    "season": "October–March",
+    "summary": "The spice shops of Kumily give way to the forests of Periyar. Pepper vines, cardamom and cinnamon are easy to recognise with a plantation guide.",
+    "attractions": [
+      {
+        "title": "Periyar Lake",
+        "text": "Book a forest department boat departure"
+      },
+      {
+        "title": "Kumily spice garden",
+        "text": "See how pepper and cardamom grow"
+      },
+      {
+        "title": "Periyar buffer forest",
+        "text": "Ask about licensed guided nature walks"
+      }
+    ],
+    "stay": "Look for a plantation stay just outside Kumily.",
+    "lat": 9.6068,
+    "lon": 77.1606
+  },
+  {
+    "slug": "kochi",
+    "name": "Fort Kochi",
+    "malayalam": "കൊച്ചി",
+    "region": "Ernakulam · Malabar Coast",
+    "image": "kochi",
+    "km": 45,
+    "season": "October–March",
+    "summary": "On the Fort Kochi waterfront, cantilever fishing nets still rise and fall with the tide. Follow the lanes into Mattancherry for old spice warehouses and shaded courtyards.",
+    "attractions": [
+      {
+        "title": "Chinese fishing nets",
+        "text": "Walk the waterfront at first light"
+      },
+      {
+        "title": "Mattancherry Palace",
+        "text": "Look closely at the Ramayana murals"
+      },
+      {
+        "title": "Jew Town",
+        "text": "Visit during synagogue opening hours and browse the spice shops"
+      }
+    ],
+    "stay": "Stay in a restored courtyard house near Princess Street.",
+    "lat": 9.9658,
+    "lon": 76.2421
+  },
+  {
+    "slug": "wayanad",
+    "name": "Wayanad",
+    "malayalam": "വയനാട്",
+    "region": "Northern Kerala · Western Ghats",
+    "image": "wayanad",
+    "km": 260,
+    "season": "October–March",
+    "summary": "The Thamarassery road climbs from Kozhikode into a plateau of coffee farms and forest. Allow time on the bends, especially once the afternoon mist sweeps in.",
+    "attractions": [
+      {
+        "title": "Edakkal Caves",
+        "text": "Climb in the morning to see the petroglyphs"
+      },
+      {
+        "title": "Pookode Lake",
+        "text": "Follow the lake trail before the crowds"
+      },
+      {
+        "title": "Lakkidi",
+        "text": "Watch mist roll across the escarpment"
+      }
+    ],
+    "stay": "Choose a coffee-estate guesthouse near Vythiri for two quiet nights.",
+    "lat": 11.6854,
+    "lon": 76.132
+  },
+  {
+    "slug": "varkala",
+    "name": "Varkala",
+    "malayalam": "വർക്കല",
+    "region": "Thiruvananthapuram · Arabian Sea",
+    "image": "beach",
+    "km": 169,
+    "season": "November–March",
+    "summary": "Varkala's laterite cliffs meet a long stretch of sea. The northern headland includes quieter paths towards Odayam while Papanasam sees local ritual and beach life.",
+    "attractions": [
+      {
+        "title": "North Cliff",
+        "text": "Walk north to Odayam in the cooler hours"
+      },
+      {
+        "title": "Papanasam Beach",
+        "text": "Follow lifeguard directions and local bathing customs"
+      },
+      {
+        "title": "Janardanaswamy Temple",
+        "text": "Check visitor and dress rules before a visit"
+      }
+    ],
+    "stay": "Look for low-rise guesthouses near Odayam for quieter nights.",
+    "lat": 8.7379,
+    "lon": 76.7163
+  },
+  {
+    "slug": "kovalam",
+    "name": "Kovalam",
+    "malayalam": "കോവളം",
+    "region": "Thiruvananthapuram · Arabian Sea",
+    "image": "kovalam",
+    "km": 220,
+    "season": "November–February",
+    "summary": "Three scalloped bays curve below Vizhinjam lighthouse. The seafront is best on foot, from the fishing boats near the harbour to the sand at Lighthouse Beach.",
+    "attractions": [
+      {
+        "title": "Vizhinjam Lighthouse",
+        "text": "Climb for a view over the headland when open"
+      },
+      {
+        "title": "Lighthouse Beach",
+        "text": "Walk the shore along the cafés"
+      },
+      {
+        "title": "Samudra Beach",
+        "text": "Find a quieter cove north of the main promenade"
+      }
+    ],
+    "stay": "Choose a hillside room overlooking one of the three bays.",
+    "lat": 8.4004,
+    "lon": 76.9787
+  },
+  {
+    "slug": "vagamon",
+    "name": "Vagamon",
+    "malayalam": "വാഗമൺ",
+    "region": "Idukki–Kottayam · Hill country",
+    "image": "vagamon",
+    "km": 93,
+    "season": "September–March",
+    "summary": "Rounded grasslands and pine groves make Vagamon a gentler hill stop. An extra night leaves room for a walk between showers and a long tea break.",
+    "attractions": [
+      {
+        "title": "Vagamon meadows",
+        "text": "Walk the grass hills in the morning"
+      },
+      {
+        "title": "Pine forest",
+        "text": "Follow the forest path below the old plantation"
+      },
+      {
+        "title": "Thangalpara",
+        "text": "Take the rocky trail in dry weather"
+      }
+    ],
+    "stay": "Book a small cottage near the grassland walks.",
+    "lat": 9.6847,
+    "lon": 76.905
+  },
+  {
+    "slug": "athirappilly",
+    "name": "Athirappilly",
+    "malayalam": "അതിരപ്പിള്ളി",
+    "region": "Thrissur · Chalakudy River",
+    "image": "falls",
+    "km": 39,
+    "season": "September–February",
+    "summary": "The Chalakudy River drops below a wooded escarpment. Spray hangs over the path after the rains and hornbills can be heard along the river road.",
+    "attractions": [
+      {
+        "title": "Athirappilly Falls",
+        "text": "Start at the upper viewpoint and check lower path access"
+      },
+      {
+        "title": "Vazhachal Falls",
+        "text": "Visit the river bend upstream"
+      },
+      {
+        "title": "Chalakudy river road",
+        "text": "Look for forest birds from designated public stops"
+      }
+    ],
+    "stay": "Stay near the river or visit as a day trip from Kochi.",
+    "lat": 10.2853,
+    "lon": 76.5698
+  },
+  {
+    "slug": "poovar",
+    "name": "Poovar",
+    "malayalam": "പൂവാർ",
+    "region": "Thiruvananthapuram · Estuary",
+    "image": "poovar",
+    "km": 237,
+    "season": "November–March",
+    "summary": "At Poovar the Neyyar flows into a tidal estuary. Routes change with the sandbar and water level, so reserve a boat with a local pilot.",
+    "attractions": [
+      {
+        "title": "Neyyar backwaters",
+        "text": "Take a guided small-boat ride into the mangroves"
+      },
+      {
+        "title": "Poovar sandbar",
+        "text": "See the river meet the Arabian Sea when the banks are accessible"
+      },
+      {
+        "title": "Vizhinjam harbour",
+        "text": "Stop for the fishing boats on the coastal drive"
+      }
+    ],
+    "stay": "Try a quiet riverside stay on the inland side of the estuary.",
+    "lat": 8.3188,
+    "lon": 77.0707
+  },
+  {
+    "slug": "bekal",
+    "name": "Bekal",
+    "malayalam": "ബേക്കൽ",
+    "region": "Kasaragod · North Malabar",
+    "image": "bekal",
+    "km": 345,
+    "season": "November–February",
+    "summary": "Bekal Fort's laterite walls look out onto the Arabian Sea. North Malabar rewards a two-night stay, with coastal paths and the backwaters of nearby Valiyaparamba.",
+    "attractions": [
+      {
+        "title": "Bekal Fort",
+        "text": "Walk the ramparts near sunset"
+      },
+      {
+        "title": "Kappil Beach",
+        "text": "Take the quieter coastal footpath"
+      },
+      {
+        "title": "Valiyaparamba",
+        "text": "Explore the islands by local boat"
+      }
+    ],
+    "stay": "Book a beachside or backwater stay between Bekal and Nileshwar.",
+    "lat": 12.3932,
+    "lon": 75.031
+  },
+  {
+    "slug": "thrissur",
+    "name": "Thrissur & Guruvayur",
+    "malayalam": "തൃശ്ശൂർ",
+    "region": "Thrissur · Central Kerala",
+    "image": "thrissur",
+    "km": 55,
+    "season": "November–February",
+    "summary": "Thrissur’s old centre circles the Vadakkunnathan Temple. Beyond the town, Guruvayur is an important Krishna pilgrimage with its own entry and dress requirements.",
+    "attractions": [
+      {
+        "title": "Swaraj Round",
+        "text": "Walk the ring road around the temple grounds"
+      },
+      {
+        "title": "Guruvayur",
+        "text": "Allow time for queues and check entry rules"
+      },
+      {
+        "title": "Kerala Kalamandalam",
+        "text": "Ask ahead about guided visits while students are in session"
+      }
+    ],
+    "stay": "Stay near Guruvayur for an early pilgrimage start.",
+    "lat": 10.5276,
+    "lon": 76.2144
+  }
+]

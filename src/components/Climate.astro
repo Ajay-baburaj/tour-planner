@@ -1,0 +1,21 @@
+---
+const climate = [
+ ['Jan','Cool, dry coastal mornings','One of the easiest months to combine a tea-estate walk with a lake cruise. Book popular stays ahead.',0],
+ ['Feb','Clear skies by the water','Try a dawn wetland walk in Kumarakom and a Fort Kochi evening on foot.',1],
+ ['Mar','Warmer on the coast','Start sightseeing early and head uphill for cooler evenings.',1],
+ ['Apr','Heat with passing showers','Plan unhurried town mornings and keep an indoor option for the afternoon.',2],
+ ['May','Humid before the monsoon','Balance early walks with shaded stays and flexible transfers.',3],
+ ['Jun','Southwest monsoon arrives','Allow extra time on the roads. Waterfall and boating access can change with conditions.',5],
+ ['Jul','Long, green monsoon days','Look for a covered veranda and check trail and boat departures locally.',5],
+ ['Aug','Rain breaks and festival season','Onam dates change by year. Ask about local events before choosing travel dates.',4],
+ ['Sep','Waterfalls with more dry intervals','Athirappilly is a rewarding stop when official viewpoints are open.',3],
+ ['Oct','Mixed skies and lush hills','Pack for passing rain and keep one spare afternoon for estate walks.',3],
+ ['Nov','The drier season begins','Build a circuit from the hills to the coast, with a night beside the backwaters.',1],
+ ['Dec','Clear mornings in the hills','Layers help on early Munnar starts. The coast is typically warm by midday.',0],
+];
+---
+<section class="climate"><canvas data-rain aria-hidden="true"></canvas><div class="shell climate-content">
+<div><p class="eyebrow gold-rule">Travel by season</p><h2>There’s a Kerala <em>for every month.</em></h2><p>Pick a month to see what the season is like and where to spend your time.</p></div>
+<div class="climate-widget"><div class="climate-dial" role="group" aria-label="Month">{climate.map(([month,,,rain],index)=><button type="button" data-month={index} data-rain-level={rain} aria-pressed={String(index===0)}>{month}</button>)}</div>
+{climate.map(([,title,text],index)=><div class="climate-note" data-climate={index} hidden={index!==0}><h3>{title}</h3><p>{text}</p></div>)}</div>
+</div></section>

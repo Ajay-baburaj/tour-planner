@@ -1,0 +1,5 @@
+---
+import Form from './Form.astro';
+import Icon from './Icon.astro';
+---
+<dialog class="drawer" id="trip-enquiry" aria-labelledby="drawer-title"><button type="button" data-close class="icon-button dialog-close" aria-label="Close trip planner"><Icon name="close"/></button><p class="eyebrow">Your Kerala journey</p><h2 id="drawer-title">Where shall we go?</h2><p>Tell us when you’d like to travel and what you want to see.</p><Form id="drawer" context="Trip planning" kind="trip"/></dialog>

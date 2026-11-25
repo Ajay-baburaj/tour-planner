@@ -1,0 +1,20 @@
+---
+const {name, size = 20} = Astro.props;
+const paths: Record<string,string> = {
+  palm:'M5 22h15M12 21c2-5 4-10 3-15M15 6C10 2 7 4 4 9c4-3 7-4 11-3Zm0 0c-1-5 3-6 6-4-3 0-5 1-6 4Zm0 0c5-2 8 1 8 5-3-3-5-4-8-5Zm0 0c-4 1-6 4-6 8 2-3 4-5 6-8Z',
+  pin:'M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z M12 7a3 3 0 1 0 0 6 3 3 0 1 0 0-6Z',
+  arrow:'M4 12h15m-6-6 6 6-6 6', diagonal:'M6 18 18 6M8 6h10v10', down:'m6 9 6 6 6-6',
+  compass:'M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20Zm4 6-2 6-6 2 2-6 6-2Z',
+  calendar:'M4 5h16v16H4zM8 3v4m8-4v4M4 10h16', time:'M12 3a9 9 0 1 0 0 18 9 9 0 1 0 0-18Zm0 4v5l3 2',
+  users:'M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2m6-17a4 4 0 1 0 0 8 4 4 0 1 0 0-8Zm10 11a4 4 0 0 1 3 4v2m-6-17a4 4 0 0 1 0 8',
+  search:'M10 3a7 7 0 1 0 0 14 7 7 0 1 0 0-14Zm5 12 6 6',
+  close:'m6 6 12 12M18 6 6 18', menu:'M3 6h18M3 12h18M3 18h18',
+  phone:'M6 3h4l2 5-3 2a13 13 0 0 0 5 5l2-3 5 2v4c0 2-2 3-4 3C9 20 4 15 3 7c0-2 1-4 3-4Z',
+  mail:'M3 5h18v14H3zM3 6l9 7 9-7', chat:'M21 11.5a9 9 0 0 1-9 9c-1.3 0-2.5-.3-3.7-.8L4 21l1.1-4.2a9 9 0 1 1 15.9-5.3Z',
+  boat:'M2 16h20l-4 5H6l-4-5Zm4 0v-3a6 6 0 0 1 6-6h2a5 5 0 0 1 5 5v4m-7-8v8',
+  car:'M3 16v-5l3-6h12l3 6v5H3Zm0 0v3m18-3v3M3 11h18m-14 2h1m8 0h1',
+  leaf:'M20 4C6 3 3 9 7 16s16 3 13-12ZM4 21 16 9', check:'m5 12 4 4 10-10',
+  heart:'M12 20 4.5 12A5 5 0 0 1 12 5a5 5 0 0 1 7.5 7L12 20Z',
+};
+---
+<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={paths[name] || paths.compass}/></svg>

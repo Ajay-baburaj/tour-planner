@@ -1,0 +1,5 @@
+---
+import Crumbs from './Crumbs.astro';
+const { eyebrow, title, summary, crumbs } = Astro.props;
+---
+<section class="page-lead"><div class="shell">{crumbs && <Crumbs items={crumbs}/>}<p class="eyebrow gold-rule">{eyebrow}</p><h1>{title}</h1>{summary && <p>{summary}</p>}</div></section>

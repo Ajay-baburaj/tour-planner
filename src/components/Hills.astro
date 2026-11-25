@@ -1,0 +1,12 @@
+---
+import Photo from './Photo.astro';
+import Icon from './Icon.astro';
+const paths = [
+'M0 420Q145 225 320 340T680 288T1030 315T1440 220V640H0Z',
+'M0 490Q140 330 315 420T700 398T1100 326T1440 352V640H0Z',
+'M0 515Q190 370 380 492T790 435T1120 385T1440 490V640H0Z',
+'M0 535Q200 440 334 525T744 472T1120 511T1440 431V640H0Z',
+'M0 588Q215 510 416 561T798 548T1137 542T1440 493V640H0Z',
+];
+---
+<section class="hill-scene" id="tea-country"><Photo image="tea" alt="Rolling tea gardens in Munnar" sizes="100vw"/><svg class="hill-art" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><defs><pattern id="tea-rows" width="41" height="15" patternUnits="userSpaceOnUse"><path d="M-4 13Q15 0 45 10" fill="none" stroke="#c1bd71" opacity=".3"/></pattern></defs><circle class="hill-sun" cx="1120" cy="162" r="66"/>{paths.map((d,i)=><g class="hill-layer" data-depth={i+1}><path d={d} fill={['#779083','#627966','#4c6753','#325443','#1f4439'][i]}/><path d={d} fill="url(#tea-rows)"/></g>)}</svg><div class="hill-mist"></div><div class="shell hill-copy"><p class="eyebrow gold-rule">Munnar · 1,500 m above sea level</p><h2>Above the <em>tea line.</em></h2><p>Follow the estate roads into the morning mist.</p><a class="button gold" href="/destinations/munnar/">Explore Munnar <Icon name="diagonal" size={16}/></a></div></section>

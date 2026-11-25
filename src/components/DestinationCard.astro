@@ -1,0 +1,6 @@
+---
+import Icon from './Icon.astro';
+import Photo from './Photo.astro';
+const {place}=Astro.props;
+---
+<a class="destination-card" href={`/destinations/${place.slug}/`}><Photo image={place.image} sizes="(max-width: 650px) 95vw, 36vw" position={place.slug==='alleppey'?'center 67%':'center'}/><div><span class="eyebrow">{place.region}</span><h3>{place.name}</h3><span class="icon-button" aria-hidden="true"><Icon name="diagonal" size={18}/></span></div></a>

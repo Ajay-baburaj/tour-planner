@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base title="Enquiry received" description="Trip enquiry confirmation for Kasavu Journeys." noIndex campaign>
+<section class="shell section error-page"><p class="eyebrow gold-rule" data-confirmation-label>Trip planning</p><h1 data-confirmation-title>Plan your Kerala trip.</h1><p class="subtitle" data-confirmation-copy>Choose an itinerary and send a quote request for your dates.</p><div class="form-actions"><a class="button" href="/packages/">Browse itineraries <Icon name="diagonal" size={16}/></a><a class="button outline" data-confirm-chat hidden target="_blank" rel="noopener">Continue on WhatsApp</a></div></section>
+<script>
+const store = 'kasavu-conversion';
+try {
+  const value=JSON.parse(sessionStorage.getItem(store) || 'null') as {form:string; chat:string} | null;
+  if(value){
+    sessionStorage.removeItem(store);
+    document.querySelector('[data-confirmation-label]')!.textContent='Enquiry received';
+    document.querySelector('[data-confirmation-title]')!.textContent='Your enquiry is with us.';
+    document.querySelector('[data-confirmation-copy]')!.textContent='We’ll use your details to check what is available for your travel dates.';
+    const chat=document.querySelector<HTMLAnchorElement>('[data-confirm-chat]');
+    if(chat && value.chat && new URL(value.chat).origin==='https://wa.me'){chat.href=value.chat;chat.hidden=false;}
+    window.dispatchEvent(new CustomEvent('kasavu:lead',{detail:{campaign:value.form}}));
+    // GA4 hook: after consent, gtag('event', 'generate_lead', { campaign: value.form }).
+    // Meta Pixel hook: after consent, fbq('track', 'Lead', { content_name: value.form }).
+    // Keep names, phones, travel dates and email addresses out of analytics.
+  }
+} catch { /* Visitors opening this URL directly see a route back to the catalogue. */ }
+</script>
+</Base>

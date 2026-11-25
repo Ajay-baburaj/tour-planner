@@ -1,0 +1,5 @@
+---
+import {places} from '../../data/catalogue';
+export function getStaticPaths(){return places.map(place=>({params:{slug:place.slug}}));}
+return Astro.redirect(`/destinations/${Astro.params.slug}/`,301);
+---

@@ -1,0 +1,13 @@
+---
+import all from '../data/destinations.json';
+import Icon from './Icon.astro';
+const positions: Record<string,number[]>={bekal:[95,52],wayanad:[146,114],thrissur:[181,211],athirappilly:[218,241],kochi:[180,258],munnar:[272,266],vagamon:[243,307],thekkady:[278,326],kumarakom:[209,314],alleppey:[198,338],varkala:[246,406],kovalam:[282,454],poovar:[303,470]};
+---
+<div class="map-layout">
+<svg class="kerala-map" viewBox="0 0 420 500" role="group" aria-label="Illustrated Kerala destination map">
+<defs><pattern id="map-topography" width="32" height="30" patternUnits="userSpaceOnUse"><path d="M-8 23Q12 3 34 14M-10 30Q10 10 34 20" fill="none" stroke="#9bb097" stroke-opacity=".7"/></pattern></defs>
+<path d="M65 24 96 28 116 46 121 77 158 84 185 103 166 133 201 155 193 198 227 211 245 231 283 245 295 274 281 290 311 325 294 350 317 382 302 401 338 432 324 455 314 480 287 475 270 451 252 432 231 405 218 378 199 361 180 334 176 299 164 277 160 245 143 223 143 194 121 177 112 153 97 139 83 110 72 84 63 53Z" fill="#dce1cd" stroke="#7c9a84" stroke-width="2"/><path d="M65 24 96 28 116 46 121 77 158 84 185 103 166 133 201 155 193 198 227 211 245 231 283 245 295 274 281 290 311 325 294 350 317 382 302 401 338 432 324 455 314 480 287 475 270 451 252 432 231 405 218 378 199 361 180 334 176 299 164 277 160 245 143 223 143 194 121 177 112 153 97 139 83 110 72 84 63 53Z" fill="url(#map-topography)"/>
+<text x="65" y="358" class="map-sea">Arabian Sea</text>
+{all.map((place,i)=> <a href={`/destinations/${place.slug}/`} data-map={place.slug} class="map-pin" aria-label={place.name} style={`--pin-index:${i}`}><title>{place.name}</title><circle cx={positions[place.slug][0]} cy={positions[place.slug][1]} r="11"/><circle cx={positions[place.slug][0]} cy={positions[place.slug][1]} r="4"/></a>)}
+</svg>
+<div class="map-places" aria-label="Destinations">{all.map(place=><a href={`/destinations/${place.slug}/`} data-map={place.slug}>{place.name} <Icon name="diagonal" size={14}/></a>)}</div></div>

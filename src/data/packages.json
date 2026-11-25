@@ -1,0 +1,1596 @@
+[
+  {
+    "slug": "tea-and-tides",
+    "title": "Tea Hills & Backwaters",
+    "route": [
+      "munnar",
+      "alleppey"
+    ],
+    "places": [
+      "Munnar",
+      "Alleppey"
+    ],
+    "theme": "Honeymoon",
+    "region": "Kerala",
+    "days": 5,
+    "price": 18900,
+    "badge": "Popular",
+    "summary": "Two mornings in Munnar’s tea country, then a night on the water in a private kettuvallam.",
+    "highlights": [
+      "Guided tea country walk",
+      "Mattupetty valley",
+      "Private backwater cruise"
+    ],
+    "images": [
+      "tea",
+      "boat"
+    ],
+    "itinerary": [
+      {
+        "title": "Kochi to Munnar",
+        "text": "Meet your driver near Cochin Airport. Drive up through Neriamangalam, stopping where safe for photographs and a tea break."
+      },
+      {
+        "title": "Tea country at first light",
+        "text": "Follow the estate paths with a local guide, then visit the Tea Museum if its opening hours suit. Keep the afternoon free."
+      },
+      {
+        "title": "Mattupetty and the high range",
+        "text": "Head to Mattupetty in the morning, then return to the estate for an unhurried afternoon and sunset above Pallivasal."
+      },
+      {
+        "title": "Munnar to the Alleppey backwaters",
+        "text": "Leave after an early breakfast for the long transfer. Board the houseboat at the agreed jetty and settle in for a canal cruise and dinner."
+      },
+      {
+        "title": "Alleppey to Kochi",
+        "text": "Have breakfast on deck, disembark and transfer to Cochin Airport or your agreed onward stop."
+      }
+    ],
+    "popularity": 100,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 2
+  },
+  {
+    "slug": "classic-kerala",
+    "title": "The Classic Kerala Circuit",
+    "route": [
+      "kochi",
+      "munnar",
+      "thekkady",
+      "alleppey"
+    ],
+    "places": [
+      "Fort Kochi",
+      "Munnar",
+      "Thekkady",
+      "Alleppey"
+    ],
+    "theme": "Family",
+    "region": "Kerala",
+    "days": 7,
+    "price": 28900,
+    "badge": "Bestseller",
+    "summary": "An unhurried week through the spice port, high ranges and the rice fields of Kuttanad.",
+    "highlights": [
+      "Fort Kochi waterfront",
+      "Munnar and Periyar",
+      "Kuttanad backwaters"
+    ],
+    "images": [
+      "kochi",
+      "tea",
+      "periyar",
+      "boat"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrival in Fort Kochi",
+        "text": "Meet your driver at Cochin Airport. Check in and take a short waterfront walk if you arrive before dusk."
+      },
+      {
+        "title": "Fort Kochi to Munnar",
+        "text": "See the fishing nets in the morning. Drive inland and up to the tea estates, allowing time for breaks on the winding road."
+      },
+      {
+        "title": "Munnar tea country",
+        "text": "Spend the morning in the estates. Choose the Tea Museum or a Mattupetty visit depending on opening hours and weather."
+      },
+      {
+        "title": "Munnar to Thekkady",
+        "text": "Cross the high ranges to Kumily. Visit a working spice garden for pepper, cinnamon and cardamom."
+      },
+      {
+        "title": "Periyar to Alleppey",
+        "text": "Take an early forest department boat or a guided nature walk when available. Drive to the backwaters for a canal-side stay."
+      },
+      {
+        "title": "Kuttanad and Punnamada",
+        "text": "Cruise through the backwaters and stop for lunch. An overnight houseboat can be included in the written quote."
+      },
+      {
+        "title": "Alleppey to Cochin Airport",
+        "text": "Check out after breakfast and build in time for traffic on the airport transfer."
+      }
+    ],
+    "popularity": 99,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 16
+  },
+  {
+    "slug": "sunset-cliffs",
+    "title": "Cliffs of the Malabar Coast",
+    "route": [
+      "varkala",
+      "kovalam"
+    ],
+    "places": [
+      "Varkala",
+      "Kovalam"
+    ],
+    "theme": "Beach",
+    "region": "Kerala",
+    "days": 4,
+    "price": 14900,
+    "badge": "Coastal escape",
+    "summary": "Settle in above the Arabian Sea, with time for Odayam’s lanes and Vizhinjam’s lighthouse.",
+    "highlights": [
+      "North Cliff",
+      "Papanasam Beach",
+      "Janardanaswamy Temple"
+    ],
+    "images": [
+      "beach",
+      "kovalam"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Varkala",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "North Cliff",
+        "text": "Walk north to Odayam in the cooler hours. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Papanasam Beach",
+        "text": "Follow lifeguard directions and local bathing customs. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Kovalam",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 98,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "munnar-estates",
+    "title": "Munnar Estate Trails",
+    "route": [
+      "munnar"
+    ],
+    "places": [
+      "Munnar"
+    ],
+    "theme": "Hill Station",
+    "region": "Kerala",
+    "days": 3,
+    "price": 11900,
+    "badge": "",
+    "summary": "Spend two nights in tea country, with a plantation walk and time around Mattupetty.",
+    "highlights": [
+      "Tea Museum",
+      "Mattupetty Dam",
+      "Eravikulam National Park"
+    ],
+    "images": [
+      "tea",
+      "vagamon"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Munnar",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Tea Museum",
+        "text": "Learn how the leaves are rolled and dried. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Munnar",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 97,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "alleppey-canals",
+    "title": "An Alleppey Canal Weekend",
+    "route": [
+      "alleppey"
+    ],
+    "places": [
+      "Alleppey"
+    ],
+    "theme": "Backwater",
+    "region": "Kerala",
+    "days": 3,
+    "price": 12900,
+    "badge": "",
+    "summary": "Sleep beside the canals and spend the last afternoon aboard a private day cruiser.",
+    "highlights": [
+      "Punnamada Lake",
+      "Kuttanad canals",
+      "Alappuzha Beach"
+    ],
+    "images": [
+      "boat",
+      "water"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Alleppey",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Punnamada Lake",
+        "text": "Watch the practice lanes during snake-boat season. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Alleppey",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 96,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 8
+  },
+  {
+    "slug": "kumarakom-birds",
+    "title": "Kumarakom at First Light",
+    "route": [
+      "kumarakom"
+    ],
+    "places": [
+      "Kumarakom"
+    ],
+    "theme": "Backwater",
+    "region": "Kerala",
+    "days": 3,
+    "price": 14900,
+    "badge": "",
+    "summary": "Dawn wetland walks, a lakeside stay and an open-water Vembanad cruise.",
+    "highlights": [
+      "Kumarakom Bird Sanctuary",
+      "Vembanad Lake",
+      "Village lanes"
+    ],
+    "images": [
+      "water",
+      "boat"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Kumarakom",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Kumarakom Bird Sanctuary",
+        "text": "Walk the shaded wetland trails early. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Kumarakom",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 95,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 8
+  },
+  {
+    "slug": "periyar-spice",
+    "title": "Periyar & the Spice Gardens",
+    "route": [
+      "thekkady"
+    ],
+    "places": [
+      "Thekkady"
+    ],
+    "theme": "Wildlife",
+    "region": "Kerala",
+    "days": 4,
+    "price": 16800,
+    "badge": "",
+    "summary": "Follow a plantation guide through cardamom and pepper country, then explore Periyar by water.",
+    "highlights": [
+      "Periyar Lake",
+      "Kumily spice garden",
+      "Periyar buffer forest"
+    ],
+    "images": [
+      "periyar"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Thekkady",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Periyar Lake",
+        "text": "Book a forest department boat departure. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Kumily spice garden",
+        "text": "See how pepper and cardamom grow. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Thekkady",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 94,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 8
+  },
+  {
+    "slug": "kochi-lanes",
+    "title": "Fort Kochi After the Tide",
+    "route": [
+      "kochi"
+    ],
+    "places": [
+      "Fort Kochi"
+    ],
+    "theme": "Cultural",
+    "region": "Kerala",
+    "days": 3,
+    "price": 10900,
+    "badge": "",
+    "summary": "A car-free heritage day, time at Mattancherry and a Kathakali performance in the evening.",
+    "highlights": [
+      "Chinese fishing nets",
+      "Mattancherry Palace",
+      "Jew Town"
+    ],
+    "images": [
+      "kochi",
+      "culture"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Fort Kochi",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Chinese fishing nets",
+        "text": "Walk the waterfront at first light. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Fort Kochi",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 93,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "wayanad-coffee",
+    "title": "Wayanad Coffee Trails",
+    "route": [
+      "wayanad"
+    ],
+    "places": [
+      "Wayanad"
+    ],
+    "theme": "Adventure",
+    "region": "Kerala",
+    "days": 4,
+    "price": 17800,
+    "badge": "",
+    "summary": "A coffee-estate base for Edakkal’s rock markings and the quieter paths around Vythiri.",
+    "highlights": [
+      "Edakkal Caves",
+      "Pookode Lake",
+      "Lakkidi"
+    ],
+    "images": [
+      "wayanad"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Wayanad",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Edakkal Caves",
+        "text": "Climb in the morning to see the petroglyphs. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Pookode Lake",
+        "text": "Follow the lake trail before the crowds. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Wayanad",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 92,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 8
+  },
+  {
+    "slug": "varkala-wellbeing",
+    "title": "Slow Days in Varkala",
+    "route": [
+      "varkala"
+    ],
+    "places": [
+      "Varkala"
+    ],
+    "theme": "Ayurveda",
+    "region": "Kerala",
+    "days": 5,
+    "price": 24900,
+    "badge": "",
+    "summary": "An open itinerary around the clifftop with optional practitioner-led wellness sessions.",
+    "highlights": [
+      "North Cliff",
+      "Papanasam Beach",
+      "Janardanaswamy Temple"
+    ],
+    "images": [
+      "beach"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Varkala",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "North Cliff",
+        "text": "Walk north to Odayam in the cooler hours. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Papanasam Beach",
+        "text": "Follow lifeguard directions and local bathing customs. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Janardanaswamy Temple",
+        "text": "Check visitor and dress rules before a visit. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Varkala",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 91,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "kovalam-bays",
+    "title": "Kovalam by the Bay",
+    "route": [
+      "kovalam"
+    ],
+    "places": [
+      "Kovalam"
+    ],
+    "theme": "Beach",
+    "region": "Kerala",
+    "days": 3,
+    "price": 12900,
+    "badge": "",
+    "summary": "Pay an early visit to Vizhinjam and follow the seafront between Kovalam’s small bays.",
+    "highlights": [
+      "Vizhinjam Lighthouse",
+      "Lighthouse Beach",
+      "Samudra Beach"
+    ],
+    "images": [
+      "kovalam"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Kovalam",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Vizhinjam Lighthouse",
+        "text": "Climb for a view over the headland when open. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Kovalam",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 90,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "vagamon-walks",
+    "title": "Vagamon Meadow Walks",
+    "route": [
+      "vagamon"
+    ],
+    "places": [
+      "Vagamon"
+    ],
+    "theme": "Adventure",
+    "region": "Kerala",
+    "days": 3,
+    "price": 11900,
+    "badge": "",
+    "summary": "Two nights in a hillside cottage with wet-weather alternatives and gentle walking routes.",
+    "highlights": [
+      "Vagamon meadows",
+      "Pine forest",
+      "Thangalpara"
+    ],
+    "images": [
+      "vagamon",
+      "tea"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Vagamon",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Vagamon meadows",
+        "text": "Walk the grass hills in the morning. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Vagamon",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 89,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 8
+  },
+  {
+    "slug": "athirappilly-river",
+    "title": "The Chalakudy River Road",
+    "route": [
+      "athirappilly",
+      "kochi"
+    ],
+    "places": [
+      "Athirappilly",
+      "Fort Kochi"
+    ],
+    "theme": "Adventure",
+    "region": "Kerala",
+    "days": 3,
+    "price": 12600,
+    "badge": "",
+    "summary": "See the falls upstream and downstream, then return to Fort Kochi via the old spice port.",
+    "highlights": [
+      "Athirappilly Falls",
+      "Vazhachal Falls",
+      "Chalakudy river road"
+    ],
+    "images": [
+      "falls",
+      "kochi"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Athirappilly",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Athirappilly Falls",
+        "text": "Start at the upper viewpoint and check lower path access. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Fort Kochi",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 88,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 8
+  },
+  {
+    "slug": "poovar-estuary",
+    "title": "Poovar’s Quiet Waterways",
+    "route": [
+      "poovar"
+    ],
+    "places": [
+      "Poovar"
+    ],
+    "theme": "Honeymoon",
+    "region": "Kerala",
+    "days": 4,
+    "price": 19500,
+    "badge": "",
+    "summary": "A private riverside stay and a guided boat trip timed to the tides of the Neyyar.",
+    "highlights": [
+      "Neyyar backwaters",
+      "Poovar sandbar",
+      "Vizhinjam harbour"
+    ],
+    "images": [
+      "poovar"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Poovar",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Neyyar backwaters",
+        "text": "Take a guided small-boat ride into the mangroves. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Poovar sandbar",
+        "text": "See the river meet the Arabian Sea when the banks are accessible. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Poovar",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 87,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 2
+  },
+  {
+    "slug": "bekal-ramparts",
+    "title": "Bekal & the Northern Shore",
+    "route": [
+      "bekal"
+    ],
+    "places": [
+      "Bekal"
+    ],
+    "theme": "Beach",
+    "region": "Kerala",
+    "days": 4,
+    "price": 20900,
+    "badge": "",
+    "summary": "Pair the sea-facing fort with a quieter afternoon on Valiyaparamba’s backwaters.",
+    "highlights": [
+      "Bekal Fort",
+      "Kappil Beach",
+      "Valiyaparamba"
+    ],
+    "images": [
+      "bekal"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Bekal",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Bekal Fort",
+        "text": "Walk the ramparts near sunset. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Kappil Beach",
+        "text": "Take the quieter coastal footpath. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Bekal",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 86,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "guruvayur-pilgrimage",
+    "title": "Guruvayur & Central Kerala",
+    "route": [
+      "thrissur"
+    ],
+    "places": [
+      "Thrissur & Guruvayur"
+    ],
+    "theme": "Pilgrimage",
+    "region": "Kerala",
+    "days": 3,
+    "price": 9800,
+    "badge": "",
+    "summary": "A driver-led route timed around temple hours, with a day to explore Thrissur.",
+    "highlights": [
+      "Swaraj Round",
+      "Guruvayur",
+      "Kerala Kalamandalam"
+    ],
+    "images": [
+      "thrissur"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Thrissur & Guruvayur",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Swaraj Round",
+        "text": "Walk the ring road around the temple grounds. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Thrissur & Guruvayur",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 85,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "kerala-grand",
+    "title": "Kerala Grand Tour",
+    "route": [
+      "kochi",
+      "munnar",
+      "thekkady",
+      "kumarakom",
+      "alleppey",
+      "varkala",
+      "kovalam"
+    ],
+    "places": [
+      "Fort Kochi",
+      "Munnar",
+      "Thekkady",
+      "Kumarakom",
+      "Alleppey",
+      "Varkala",
+      "Kovalam"
+    ],
+    "theme": "Family",
+    "region": "Kerala",
+    "days": 10,
+    "price": 46500,
+    "badge": "Grand circuit",
+    "summary": "From Fort Kochi’s fishing nets to the far south, with tea estates, forests and two ways to see Vembanad.",
+    "highlights": [
+      "Chinese fishing nets",
+      "Mattancherry Palace",
+      "Jew Town"
+    ],
+    "images": [
+      "kochi",
+      "tea",
+      "periyar",
+      "water",
+      "boat",
+      "beach",
+      "kovalam"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Fort Kochi",
+        "text": "Settle into a heritage stay and spend the evening by the harbour."
+      },
+      {
+        "title": "Mattancherry and the old port",
+        "text": "Walk through Jew Town and visit the palace. See the waterfront activity near the fishing nets later in the day."
+      },
+      {
+        "title": "Fort Kochi to Munnar",
+        "text": "Drive into the Western Ghats and check into your hillside stay."
+      },
+      {
+        "title": "Munnar tea country",
+        "text": "Start early for a plantation walk, then add Mattupetty or the Tea Museum."
+      },
+      {
+        "title": "Munnar to Thekkady",
+        "text": "Travel to Kumily through the high country and stop for a guided plantation walk."
+      },
+      {
+        "title": "Thekkady to Kumarakom",
+        "text": "If available, join an early lake departure before driving to Kumarakom."
+      },
+      {
+        "title": "Vembanad and Alleppey",
+        "text": "Walk the wetlands at dawn, then transfer to Alleppey for a Kuttanad canal cruise or houseboat night."
+      },
+      {
+        "title": "Alleppey to Varkala",
+        "text": "Head south to the coast and leave late afternoon free for the cliff path."
+      },
+      {
+        "title": "Varkala to Kovalam",
+        "text": "Follow the coastline to Vizhinjam and settle in near Kovalam’s bays."
+      },
+      {
+        "title": "Depart from Thiruvananthapuram",
+        "text": "Check out after breakfast and transfer to Thiruvananthapuram Airport."
+      }
+    ],
+    "popularity": 84,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 16
+  },
+  {
+    "slug": "north-kerala",
+    "title": "North Kerala Coffee to Coast",
+    "route": [
+      "wayanad",
+      "Kozhikode",
+      "bekal"
+    ],
+    "places": [
+      "Wayanad",
+      "Kozhikode",
+      "Bekal"
+    ],
+    "theme": "Cultural",
+    "region": "Kerala",
+    "days": 6,
+    "price": 27900,
+    "badge": "",
+    "summary": "Explore Wayanad’s coffee farms, Kozhikode’s market lanes and Bekal’s coastal fort.",
+    "highlights": [
+      "Edakkal Caves",
+      "Pookode Lake",
+      "Lakkidi"
+    ],
+    "images": [
+      "wayanad",
+      "bekal"
+    ],
+    "itinerary": [
+      {
+        "title": "Kozhikode Airport to Wayanad",
+        "text": "Meet your driver and cross the Thamarassery pass to an estate stay outside Vythiri."
+      },
+      {
+        "title": "Edakkal and coffee country",
+        "text": "Visit the petroglyphs early and learn how coffee is processed at a working estate."
+      },
+      {
+        "title": "Wayanad to Kozhikode",
+        "text": "Descend the ghat road and spend the afternoon around SM Street and the waterfront."
+      },
+      {
+        "title": "Kozhikode to Bekal",
+        "text": "Follow the North Malabar coast, with a lunch stop on the way to your stay near Bekal."
+      },
+      {
+        "title": "Bekal Fort and Valiyaparamba",
+        "text": "Walk the ramparts and, if the tide suits, take a boat through the nearby backwater islands."
+      },
+      {
+        "title": "Depart for Mangaluru Airport",
+        "text": "Check out after breakfast and head north to the agreed drop-off."
+      }
+    ],
+    "popularity": 83,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "goa-coast",
+    "title": "Goa’s Southern Shore",
+    "route": [
+      "Goa"
+    ],
+    "places": [
+      "Goa"
+    ],
+    "theme": "Beach",
+    "region": "Domestic",
+    "days": 4,
+    "price": 18900,
+    "badge": "",
+    "summary": "A Panjim heritage morning and two beach days around the quieter southern bays.",
+    "highlights": [
+      "Fontainhas walk",
+      "Colva and Benaulim coast",
+      "Old Goa churches"
+    ],
+    "images": [
+      "goa"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Goa",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Fontainhas walk",
+        "text": "Allow time at Fontainhas walk and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Colva and Benaulim coast",
+        "text": "Allow time at Colva and Benaulim coast and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Goa",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 82,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "hyderabad-deccan",
+    "title": "Hyderabad’s Deccan Heritage",
+    "route": [
+      "Hyderabad"
+    ],
+    "places": [
+      "Hyderabad"
+    ],
+    "theme": "Cultural",
+    "region": "Domestic",
+    "days": 3,
+    "price": 15900,
+    "badge": "",
+    "summary": "Time for Charminar, Golconda’s granite ramparts and a slow lunch in the old city.",
+    "highlights": [
+      "Charminar and Laad Bazaar",
+      "Golconda Fort",
+      "Hussain Sagar promenade"
+    ],
+    "images": [
+      "hyderabad"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Hyderabad",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Charminar and Laad Bazaar",
+        "text": "Allow time at Charminar and Laad Bazaar and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Hyderabad",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 81,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "agra-circuit",
+    "title": "Delhi, Agra & Jaipur",
+    "route": [
+      "North India"
+    ],
+    "places": [
+      "North India"
+    ],
+    "theme": "Cultural",
+    "region": "Domestic",
+    "days": 6,
+    "price": 34900,
+    "badge": "",
+    "summary": "Follow the Golden Triangle from Delhi’s gardens to the Taj Mahal and Jaipur’s old bazaars.",
+    "highlights": [
+      "Delhi’s Lodhi Garden",
+      "The Taj Mahal at dawn",
+      "Jaipur’s old city"
+    ],
+    "images": [
+      "agra"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in North India",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Delhi’s Lodhi Garden",
+        "text": "Allow time at Delhi’s Lodhi Garden and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "The Taj Mahal at dawn",
+        "text": "Allow time at The Taj Mahal at dawn and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Jaipur’s old city",
+        "text": "Allow time at Jaipur’s old city and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Delhi’s Lodhi Garden",
+        "text": "Allow time at Delhi’s Lodhi Garden and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from North India",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 80,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "andaman-bays",
+    "title": "Andaman Island Days",
+    "route": [
+      "Andaman"
+    ],
+    "places": [
+      "Andaman"
+    ],
+    "theme": "Family",
+    "region": "Domestic",
+    "days": 6,
+    "price": 39900,
+    "badge": "",
+    "summary": "Spend time in Port Blair, then travel by ferry to Havelock and its western coast.",
+    "highlights": [
+      "Cellular Jail",
+      "Radhanagar Beach",
+      "Swaraj Dweep ferry"
+    ],
+    "images": [
+      "andaman"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Andaman",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Cellular Jail",
+        "text": "Allow time at Cellular Jail and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Radhanagar Beach",
+        "text": "Allow time at Radhanagar Beach and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Swaraj Dweep ferry",
+        "text": "Allow time at Swaraj Dweep ferry and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Cellular Jail",
+        "text": "Allow time at Cellular Jail and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Andaman",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 79,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 16
+  },
+  {
+    "slug": "malaysia-markets",
+    "title": "Malaysia Street to Skyline",
+    "route": [
+      "Malaysia"
+    ],
+    "places": [
+      "Malaysia"
+    ],
+    "theme": "Family",
+    "region": "International",
+    "days": 5,
+    "price": 45900,
+    "badge": "",
+    "summary": "A Kuala Lumpur base for market evenings, Batu Caves and a Melaka excursion.",
+    "highlights": [
+      "Batu Caves",
+      "Kuala Lumpur market evening",
+      "Melaka heritage streets"
+    ],
+    "images": [
+      "malaysia"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Malaysia",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Batu Caves",
+        "text": "Allow time at Batu Caves and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Kuala Lumpur market evening",
+        "text": "Allow time at Kuala Lumpur market evening and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Melaka heritage streets",
+        "text": "Allow time at Melaka heritage streets and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Malaysia",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 78,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 16
+  },
+  {
+    "slug": "dubai-creek",
+    "title": "Dubai Creek & Desert",
+    "route": [
+      "Dubai"
+    ],
+    "places": [
+      "Dubai"
+    ],
+    "theme": "Family",
+    "region": "International",
+    "days": 5,
+    "price": 52900,
+    "badge": "",
+    "summary": "Explore the older creek-side neighbourhoods, cross by abra and spend an evening among the dunes.",
+    "highlights": [
+      "Dubai Creek abra",
+      "Al Fahidi lanes",
+      "Guided desert excursion"
+    ],
+    "images": [
+      "dubai"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Dubai",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Dubai Creek abra",
+        "text": "Allow time at Dubai Creek abra and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Al Fahidi lanes",
+        "text": "Allow time at Al Fahidi lanes and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Guided desert excursion",
+        "text": "Allow time at Guided desert excursion and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Dubai",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 77,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 16
+  },
+  {
+    "slug": "thailand-islands",
+    "title": "Thailand’s Andaman Shore",
+    "route": [
+      "Thailand"
+    ],
+    "places": [
+      "Thailand"
+    ],
+    "theme": "Beach",
+    "region": "International",
+    "days": 6,
+    "price": 54900,
+    "badge": "",
+    "summary": "Base yourself around Krabi with time for Railay and an optional island boat excursion.",
+    "highlights": [
+      "Railay beach",
+      "Krabi night market",
+      "Optional island cruise"
+    ],
+    "images": [
+      "thailand"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Thailand",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Railay beach",
+        "text": "Allow time at Railay beach and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Krabi night market",
+        "text": "Allow time at Krabi night market and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Optional island cruise",
+        "text": "Allow time at Optional island cruise and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Railay beach",
+        "text": "Allow time at Railay beach and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Thailand",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 76,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 12
+  },
+  {
+    "slug": "singapore-walks",
+    "title": "Singapore Garden Days",
+    "route": [
+      "Singapore"
+    ],
+    "places": [
+      "Singapore"
+    ],
+    "theme": "Family",
+    "region": "International",
+    "days": 5,
+    "price": 64900,
+    "badge": "",
+    "summary": "Link Chinatown, the Botanic Gardens and Marina Bay with time to eat at neighbourhood hawker centres.",
+    "highlights": [
+      "Botanic Gardens",
+      "Marina Bay",
+      "Chinatown hawker centres"
+    ],
+    "images": [
+      "singapore"
+    ],
+    "itinerary": [
+      {
+        "title": "Arrive in Singapore",
+        "text": "Meet your driver at the agreed arrival point and check in. The first afternoon is kept flexible around your arrival."
+      },
+      {
+        "title": "Botanic Gardens",
+        "text": "Allow time at Botanic Gardens and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Marina Bay",
+        "text": "Allow time at Marina Bay and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Chinatown hawker centres",
+        "text": "Allow time at Chinatown hawker centres and confirm local opening hours before you set out.. Leave the rest of the day for local meals and time at your own pace."
+      },
+      {
+        "title": "Depart from Singapore",
+        "text": "After breakfast, check out and transfer to the airport or railway station agreed in your itinerary."
+      }
+    ],
+    "popularity": 75,
+    "months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "maxGuests": 16
+  }
+]

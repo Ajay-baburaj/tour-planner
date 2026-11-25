@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import PageLead from '../components/PageLead.astro';
+import Form from '../components/Form.astro';
+import Icon from '../components/Icon.astro';
+import LocationMap from '../components/LocationMap.astro';
+import {site,whatsapp} from '../site.config';
+import {openMap,breadcrumbSchema} from '../data/catalogue';
+const chat=whatsapp("Hi, I'm checking the Kasavu Journeys contact page. I'd like to enquire about a Kerala trip.");
+const faqs=[
+ ['Where do private tours start?','Kochi is the primary arrival point. For routes in North or South Kerala we can quote pickup from another airport, railway station or hotel.'],
+ ['What should I send with my enquiry?','Share your travel dates, who is coming and two or three places you want to include. Add any dietary, luggage, mobility or room requirements.'],
+ ['Can I request a taxi or boat by itself?','Yes. Choose the vehicle or houseboat first so your enquiry includes the right specifications.'],
+ ['When is my booking confirmed?','A request starts a conversation. Confirmation follows after you approve the written quote and meet the payment conditions.'],
+];
+---
+<Base title="Contact & trip planning" description="Plan a private Kerala trip, Cochin Airport pickup or Alleppey houseboat with Kasavu Journeys." schema={[breadcrumbSchema(Astro.site,[{name:'Contact',path:'/contact/'}]),{"@context":"https://schema.org","@type":"FAQPage",mainEntity:faqs.map(([name,text])=>({"@type":"Question",name,acceptedAnswer:{"@type":"Answer",text}}))}]}>
+<PageLead eyebrow="Kochi · Kerala" title="Let’s plan your days." summary="Tell us about the travellers, the dates and the pace you have in mind." crumbs={[{label:'Contact'}]}/>
+<section class="shell section booking-layout">
+<div class="article-copy"><h2>How to reach us</h2><dl class="facts"><dt>Base</dt><dd>{site.address || 'Kochi, near Cochin International Airport'}</dd>{site.hours && <><dt>Support hours</dt><dd>{site.hours}</dd></>}{site.phone && <><dt>Call</dt><dd><a href={`tel:${site.phone}`}>{site.phone}</a></dd></>}{site.email && <><dt>Email</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></>}</dl>{chat && <a class="button" href={chat}><Icon name="chat" size={18}/> WhatsApp us</a>}<LocationMap/><a class="text-link map-link" href={openMap(site.mapQuery)} target="_blank" rel="noopener">Open in Google Maps <Icon name="diagonal" size={15}/></a></div>
+<div class="panel"><h2>Trip enquiry</h2><Form id="contact" context="Trip planning from the contact page"/></div>
+</section>
+<section class="shell section related booking-layout"><div class="article-copy"><h2>Common questions</h2>{faqs.map(([q,a])=><details class="accordion"><summary>{q}</summary><p>{a}</p></details>)}</div><div class="panel"><h2>Request a callback</h2><Form id="callback" context="Callback request" kind="callback" actionText="Request callback"/></div></section>
+</Base>

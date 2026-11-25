@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageLead from '../../components/PageLead.astro';
+import PackageCard from '../../components/PackageCard.astro';
+import Icon from '../../components/Icon.astro';
+import {trips,destinationOptions,themes,months,breadcrumbSchema} from '../../data/catalogue';
+---
+<Base title="Tour packages" description="Filter Kerala, domestic and international tour itineraries by destination, dates, duration and budget." schema={[breadcrumbSchema(Astro.site,[{name:'Tour packages',path:'/packages/'}])]}>
+<PageLead eyebrow="Private tours · indicative twin-share rates" title="Find your itinerary." summary="Start with a place or how you want to travel. Compare routes, save favourites and use any itinerary as the starting point for a private trip." crumbs={[{label:'Tour packages'}]}/>
+<section class="shell section catalogue" aria-label="Tour package catalogue">
+  <form class="filters panel" data-package-filters>
+    <label>Destination<select name="destination"><option value="">All destinations</option>{destinationOptions.map(([value,title])=><option value={value}>{title}</option>)}</select></label>
+    <label>Travel style<select name="theme"><option value="">All themes</option>{themes.map(t=><option>{t}</option>)}</select></label>
+    <label>Region<select name="region"><option value="">All regions</option>{['Kerala','Domestic','International'].map(t=><option>{t}</option>)}</select></label>
+    <label>Duration<select name="duration"><option value="">Any length</option><option value="1-3">1–3 days</option><option value="4-6">4–6 days</option><option value="7-30">7+ days</option></select></label>
+    <label>Travel month<select name="month"><option value="">Any month</option>{months.map((month,i)=><option value={i+1}>{month}</option>)}</select></label>
+    <label>Travellers<select name="travellers"><option value="">Any group</option><option value="1">Solo</option><option value="2">2 travellers</option><option value="3-5">3–5 travellers</option><option value="6+">6+ travellers</option></select></label>
+    <label>Minimum budget <output for="minPrice" data-min-price>₹0</output><input name="min" id="minPrice" type="range" min="0" max="80000" step="500" value="0"/></label>
+    <label>Maximum budget <output for="maxPrice" data-max-price>₹80,000</output><input name="max" id="maxPrice" type="range" min="0" max="80000" step="500" value="80000"/></label>
+    <label>Sort by<select name="sort"><option value="">Popularity</option><option value="price-up">Price · low to high</option><option value="price-down">Price · high to low</option><option value="length">Duration · shortest first</option></select></label>
+  </form>
+  <div class="filter-bar"><p data-results role="status">{trips.length} sample itineraries</p><div><label><input type="checkbox" data-saved-only/> Saved trips only</label><button type="button" class="button outline" data-clear-filters>Reset filters</button><button type="button" class="button" data-open-compare disabled>Compare <span data-compare-count>0</span></button></div></div>
+  <p data-no-results class="status-empty" hidden>No trips match these filters. Try a nearby destination or a wider date or budget range.</p>
+  <div class="package-grid" data-package-list>{trips.map(trip=><PackageCard trip={trip} interactive/>)}</div>
+  <dialog data-package-dialog aria-labelledby="package-dialog-title"><button type="button" class="icon-button dialog-close" data-dialog-dismiss aria-label="Close package information"><Icon name="close"/></button><h2 id="package-dialog-title"></h2><div data-dialog-body></div></dialog>
+  {trips.map(trip=><template data-quick-info={trip.slug}><p>{trip.summary}</p><ul>{trip.highlights.map(note=><li>{note}</li>)}</ul><p><strong>{trip.days-1} nights / {trip.days} days</strong> · {trip.places.join(' · ')}</p><p><a class="button" href={`/packages/${trip.slug}/`}>View itinerary <Icon name="diagonal" size={16}/></a></p></template>)}
+</section>
+<script>import '../../scripts/packages';</script>
+</Base>

@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import Crumbs from '../components/Crumbs.astro';
+import Photo from '../components/Photo.astro';
+import Icon from '../components/Icon.astro';
+import {breadcrumbSchema} from '../data/catalogue';
+import {site} from '../site.config';
+const stages=[
+ ['Begin in Kochi','We start with the point of arrival, the size of your group and how much of the first day you want to spend in a vehicle.'],
+ ['Leave room between stops','A hill drive and a backwater crossing each deserve time. We use two or three anchor stays to keep the itinerary workable.'],
+ ['Confirm the details','Before a booking, confirm the vehicle, room category, meals, supplier terms and what you will pay locally.'],
+];
+---
+<Base title="About Kasavu Journeys" description="A Kochi-based travel planner for private Kerala tours, drivers, houseboats and boutique stays." schema={[breadcrumbSchema(Astro.site,[{name:'About',path:'/about/'}])]}>
+<section class="detail-hero"><Photo image="kochi" alt="The waterfront and fishing nets of Fort Kochi" sizes="100vw" eager/><div class="shell"><Crumbs items={[{label:'About'}]}/><p class="eyebrow gold-rule">From the old port to the hills</p><h1>Kasavu Journeys.</h1><p>Based near Cochin Airport, with itineraries that leave room for the places in between.</p></div></section>
+<section class="shell section detail-layout"><article class="article-copy"><h2>Our approach</h2><p>Kasavu is the gold border on a Kerala saree. It inspired the name and the way we plan a route: use a few key places to give the trip shape, with time in between for what you find along the way.</p><ol class="timeline">{stages.map(([title,note])=><li><h3>{title}</h3><p>{note}</p></li>)}</ol><h2>Who handles the trip</h2>{site.staff.length ? <div class="content-cards">{site.staff.map(person=><article><h3>{person.name}</h3><strong>{person.role}</strong><p>{person.bio}</p></article>)}</div> : <p>The booking conversation covers route planning, transport, accommodations and boat boarding. Ask who will handle each stage of your trip before you confirm.</p>}{site.trust.approvals.length>0 && <><h2>Licences and approvals</h2><ul>{site.trust.approvals.map(approval=><li><a href={approval.url}>{approval.label}</a></li>)}</ul></>}</article>
+<aside class="panel sticky-panel"><h2>Travel with us</h2><p>Choose a tour, a private driver, a houseboat or a combination.</p><a class="button" href="/services/">Explore our services <Icon name="diagonal" size={16}/></a></aside></section>
+</Base>

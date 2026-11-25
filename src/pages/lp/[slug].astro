@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import Logo from '../../components/Logo.astro';
+import Photo from '../../components/Photo.astro';
+import Icon from '../../components/Icon.astro';
+import Form from '../../components/Form.astro';
+import Review from '../../components/Review.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import campaigns from '../../data/campaigns.json';
+import vehicles from '../../data/vehicles.json';
+import reviews from '../../data/reviews.json';
+import {trips,breadcrumbSchema} from '../../data/catalogue';
+import {currency,site,whatsapp} from '../../site.config';
+export function getStaticPaths(){return campaigns.map(campaign=>({params:{slug:campaign.slug},props:{campaign}}));}
+const {campaign}=Astro.props;
+const guides=campaign.tripIds.map((id:string)=>trips.find(trip=>trip.slug===id)!).filter(Boolean);
+const carOptions=['Maruti Suzuki Dzire','Toyota Innova Crysta','Tempo Traveller 12'].map(name=>vehicles.find(vehicle=>vehicle.model===name)!);
+const notes=reviews.filter(review=>campaign.tripIds.includes(review.trip)).slice(0,2);
+const contact=whatsapp(`Hi, I'm checking ${campaign.label} on your website. Travel date: __ Guests: __`);
+const image=`/images/${campaign.image}-${campaign.image==='hero'?1280:960}.webp`;
+const preview=guides[0]?.itinerary.slice(0,3).map((day:{title:string;text:string})=>[day.title,day.text]) || [
+ ['Meet your driver','Share your flight number or hotel address so the driver can confirm where you’ll meet.'],
+ ['Travel via the agreed stops','Add tea estates, meal stops or a shore visit to your requested schedule.'],
+ ['Confirm the final drop-off','Agree an airport terminal, hotel or railway station with enough time for the onward journey.'],
+];
+---
+<Base title={campaign.label} description={campaign.summary} image={image} campaign schema={[breadcrumbSchema(Astro.site,[{name:campaign.label,path:Astro.url.pathname}]),{"@context":"https://schema.org","@type":"FAQPage",mainEntity:campaign.faq.map(([name,text]:string[])=>({"@type":"Question",name,acceptedAnswer:{"@type":"Answer",text}}))}]}>
+<header class="campaign-nav"><div class="shell"><Logo/>{site.phone && <a class="button gold" href={`tel:${site.phone}`}><Icon name="phone" size={17}/> Call</a>}</div></header>
+<section class="campaign-hero"><Photo image={campaign.image} alt="" sizes="100vw" eager position="center 64%"/><div class="shell layout">
+<div><p class="eyebrow gold-rule">{campaign.label}</p><h1>{campaign.headline}</h1><p>{campaign.summary}</p><p><strong>From {currency(campaign.price)}</strong> {campaign.unit}.</p>{contact && <a class="button gold" href={contact}><Icon name="chat" size={17}/> Ask on WhatsApp</a>}</div>
+<div class="panel" id="campaign-form"><h2>Get a quote for your dates</h2><Form id="campaign" context={campaign.label} kind="campaign" thankYou actionText="Request my quote"/></div>
+</div></section>
+<section class="campaign-trust"><div class="shell">{site.trust.years>0 && <p><strong>{site.trust.years}</strong> years in business</p>}{site.trust.travellers>0 && <p><strong>{site.trust.travellers}</strong> travellers served</p>}{site.trust.googleRating && site.trust.googleUrl && <a href={site.trust.googleUrl}><strong>{site.trust.googleRating}</strong> on Google</a>}{site.trust.approvals.map(proof=><a href={proof.url}>{proof.label}</a>)}<p><Icon name="pin" size={17}/> Based near Cochin Airport</p><p><Icon name="users" size={17}/> Private trips for your group</p><p><Icon name="check" size={17}/> Written quote before booking</p></div></section>
+<section class="shell section"><SectionTitle eyebrow="Compare the options" title={guides.length ? 'Sample itineraries.' : 'Choose your vehicle.'}/>
+{guides.length ? <div class="package-grid">{guides.map((trip:typeof trips[number])=><article class="panel campaign-option"><Photo image={trip.images[0]} alt="" /><h3>{trip.title}</h3><p>{trip.days-1} nights / {trip.days} days · From {currency(trip.price)} per person</p><p>{trip.summary}</p><a class="button" href="#campaign-form" data-campaign-option={trip.title}>Get a quote for this trip</a></article>)}</div> :
+<div class="package-grid">{carOptions.map(car=><article class="panel campaign-option"><Photo image={car.image} alt="Representative category vehicle"/><h3>{car.model}</h3><p>{car.seats} passengers · {car.bags} bags · AC</p><p>From {currency(car.day)} per day</p><a class="button" href="#campaign-form" data-campaign-option={car.model}>Ask about this vehicle</a></article>)}</div>}
+</section>
+<section class="shell section related booking-layout"><div class="article-copy"><h2>What’s included</h2><ul class="campaign-includes">{campaign.include.map((line:string)=><li><Icon name="check" size={18}/>{line}</li>)}</ul></div><div class="article-copy"><h2>How the trip starts</h2><ol class="timeline">{preview.map(([title,text]:string[],i:number)=><li><details class="accordion" open={i===0}><summary>{title}</summary><p>{text}</p></details></li>)}</ol></div></section>
+{notes.length>0 && <section class="shell section related"><SectionTitle eyebrow="From the route" title="Sample traveller stories."/><div class="reviews-grid">{notes.map(review=><Review review={review}/>)}</div></section>}
+<section class="shell section related booking-layout"><div class="article-copy"><h2>Booking questions</h2>{campaign.faq.map(([q,a]:string[])=><details class="accordion"><summary>{q}</summary><p>{a}</p></details>)}</div><div class="panel"><p class="eyebrow">Plan by 31 March 2027</p><h2>Check your dates.</h2><p class="subtitle">Sample rates depend on the dates and vehicle or room availability.</p><p class="offer-count campaign-count" data-countdown="2027-03-31T23:59:59+05:30"></p><a class="button" href="#campaign-form">Request a quote</a></div></section>
+<footer class="footer-mini"><div class="shell"><p>© {new Date().getFullYear()} {site.name} · {site.location}</p>{site.email && <a href={`mailto:${site.email}`}>{site.email}</a>} {site.phone && <a href={`tel:${site.phone}`}>{site.phone}</a>}</div></footer>
+<div class="campaign-mobile"><a class="button" href="#campaign-form">Get my quote</a></div>
+<script>
+const form=document.querySelector<HTMLFormElement>('#campaign-form form');
+const field=form?.elements.namedItem('Enquiry');
+const context=form?.dataset.context;
+document.querySelectorAll<HTMLAnchorElement>('[data-campaign-option]').forEach(link=>link.addEventListener('click',()=>{
+  if(!form || !(field instanceof HTMLInputElement)) return;
+  field.value=form.dataset.context=`${context} · ${link.dataset.campaignOption}`;
+}));
+</script>
+</Base>

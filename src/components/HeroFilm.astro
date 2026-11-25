@@ -1,0 +1,26 @@
+---
+import Icon from './Icon.astro';
+import Photo from './Photo.astro';
+const scenes=[
+ {file:'backwaters',name:'Backwaters',caption:'Alleppey Backwaters',coords:'09°30′ N · 76°20′ E'},
+ {file:'tea-country',name:'Tea Country',caption:'Munnar, Western Ghats',coords:'10°05′ N · 77°03′ E'},
+ {file:'houseboat',name:'Houseboat',caption:'Alleppey Houseboats',coords:'09°30′ N · 76°20′ E'},
+];
+const { area='media' }=Astro.props;
+---
+{area==='media' ? (
+<div class="hero-photo" data-water-hero>
+  <Photo image="hero" alt="A timber boat glides past coconut palms on the Alleppey backwaters" sizes="100vw" eager position="center 58%"/>
+  <video id="hero-film" class="hero-film" muted loop playsinline preload="none" aria-hidden="true" disablepictureinpicture></video>
+  <canvas class="water-canvas" aria-hidden="true"></canvas>
+  <div class="hero-mist" aria-hidden="true"></div>
+</div>
+) : (
+<div class="hero-films" data-hero-controls hidden>
+  <div class="film-coordinates"><Icon name="pin" size={15}/><span data-film-caption>{scenes[0].caption}</span><span class="film-lat-long" data-film-coords>{scenes[0].coords}</span></div>
+  <div class="film-controls" role="group" aria-label="Kerala films">
+    {scenes.map((scene,index)=><button type="button" data-hero-scene={scene.file} data-caption={scene.caption} data-coords={scene.coords} aria-pressed={String(index===0)} aria-controls="hero-film">{scene.name}</button>)}
+    <button type="button" class="film-pause" data-film-toggle aria-label="Pause background film" aria-controls="hero-film"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path class="pause-shape" d="M6 3v10m4-10v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path class="play-shape" d="M5 3.5v9l7-4.5-7-4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></button>
+  </div>
+</div>
+)}

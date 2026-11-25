@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import PageLead from '../components/PageLead.astro';
+import Review from '../components/Review.astro';
+import data from '../data/reviews.json';
+import {breadcrumbSchema} from '../data/catalogue';
+---
+<Base title="Traveller stories" description="Illustrative traveller feedback on Kerala road days, tea estate stays and houseboat trips." schema={[breadcrumbSchema(Astro.site,[{name:'Traveller stories',path:'/testimonials/'}])]}>
+<PageLead eyebrow="What a day can feel like" title="Traveller stories." summary="These sample stories illustrate the choices that shape an itinerary, from early tea-estate walks to quieter boat routes." crumbs={[{label:'Traveller stories'}]}/>
+<section class="shell section reviews-grid" aria-label="Illustrative traveller stories">{data.map(review=><Review review={review}/>)}</section>
+</Base>

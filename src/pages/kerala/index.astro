@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageLead from '../../components/PageLead.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import DestinationCard from '../../components/DestinationCard.astro';
+import Icon from '../../components/Icon.astro';
+import Climate from '../../components/Climate.astro';
+import {places,breadcrumbSchema} from '../../data/catalogue';
+const festivals=[
+ ['April · typically mid-month','Vishu','An early-morning kani display and a family meal mark the holiday. Ask your host what is open locally.'],
+ ['April or May · temple calendar','Thrissur Pooram','The city centre fills for processions and percussion. Confirm current dates and access before booking.'],
+ ['August or September · Malayalam calendar','Onam','Look for flower carpets, sadya lunches and civic celebrations in towns and villages.'],
+ ['August–October · event calendar','Snake boat races','Punnamada and other backwaters host long-boat races. Confirm dates and seating with the organiser.'],
+];
+---
+<Base title="Kerala travel guide" description="Plan a Kerala trip around seasons, places, local experiences, festivals and honeymoon routes." schema={[breadcrumbSchema(Astro.site,[{name:'Kerala guide',path:'/kerala/'}])]}>
+<PageLead eyebrow="Practical notes · Kerala, India" title="Before you go to Kerala." summary="Work out how far you want to travel in a day, what time of year suits you and which places deserve another night." crumbs={[{label:'Kerala guide'}]}/>
+<div class="shell guide-jump chips"><a href="#places">Places to visit</a><a href="#things">Things to do</a><a href="#seasons">Best time to visit</a><a href="#honeymoon">Honeymoon guide</a><a href="#festivals">Festivals</a></div>
+<section class="shell section guide-section" id="places"><SectionTitle eyebrow="From ridge to shore" title="Places to visit." link="/destinations/" label="All 13 destinations"/><div class="destination-index">{places.slice(0,4).map(place=><DestinationCard place={place}/>)}</div></section>
+<section class="shell section guide-section" id="things"><SectionTitle eyebrow="Plan your days" title="Things to do."/><div class="content-cards"><article><h3>Paddle at dawn</h3><p>Book a canoe in Kuttanad if seeing small waterways is a priority.</p><a class="text-link" href="/blog/houseboat-or-canoe/">Backwater boat guide</a></article><article><h3>Follow a tea estate road</h3><p>Give Munnar one full morning for the tea estates before the longer hill drive.</p><a class="text-link" href="/destinations/munnar/">Munnar guide</a></article><article><h3>Spend an evening in Fort Kochi</h3><p>Walk the waterfront as the tide turns and book a Kathakali performance near your stay.</p><a class="text-link" href="/blog/fort-kochi-on-foot/">Fort Kochi on foot</a></article></div></section>
+<div id="seasons"><Climate/></div>
+<section class="shell section guide-section" id="honeymoon"><SectionTitle eyebrow="For two" title="Plan a Kerala honeymoon."/><p class="subtitle">Pair a quiet hillside room in Munnar with a private cabin in Alleppey. For fewer transfers, choose two bases and stay an extra night in one of them.</p><a class="button" href="/lp/kerala-honeymoon/">See the honeymoon itineraries <Icon name="diagonal" size={16}/></a></section>
+<section class="shell section guide-section related" id="festivals"><SectionTitle eyebrow="Dates follow local calendars" title="Festivals & boat races."/><div class="festival-list">{festivals.map(([date,name,text])=><article><p class="eyebrow">{date}</p><h3>{name}</h3><p>{text}</p></article>)}</div></section>
+<script>
+document.querySelectorAll<HTMLButtonElement>('[data-month]').forEach(button=>button.addEventListener('click',()=>{
+  document.querySelectorAll('[data-month]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
+  document.querySelectorAll<HTMLElement>('[data-climate]').forEach(note=>{note.hidden=note.dataset.climate!==button.dataset.month;});
+}));
+</script>
+</Base>

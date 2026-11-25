@@ -1,0 +1,5 @@
+---
+import {site} from '../site.config';
+const {compact=false}=Astro.props;
+---
+<iframe class:list={['route-map',compact && 'compact-map']} title={site.address ? 'Office on Google Maps' : 'Cochin International Airport on Google Maps'} src={`https://maps.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&z=12&output=embed`} loading="lazy" referrerpolicy="no-referrer"></iframe>

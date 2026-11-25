@@ -1,0 +1,8 @@
+---
+import {trips} from '../../../data/catalogue';
+import { site,currency } from '../../../site.config';
+export function getStaticPaths(){return trips.map(trip=>({params:{slug:trip.slug},props:{trip}}));}
+const {trip}=Astro.props;
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="robots" content="noindex"/><title>{trip.title} itinerary | {site.name}</title></head><body><main><nav><a href={`/packages/${trip.slug}/`}>Back to the trip</a><button id="print" type="button">Print / Save as PDF</button></nav><header><p>{site.name} · {trip.days-1} nights / {trip.days} days</p><h1>{trip.title}</h1><p>{trip.places.join(' · ')}</p><p>{trip.summary}</p><p>Starting at {currency(trip.price)} per person, twin sharing. Confirm dates, room tier and inclusions in the written quote.</p></header><section><h2>Day-by-day plan</h2><ol>{trip.itinerary.map(day=><li><h3>{day.title}</h3><p>{day.text}</p></li>)}</ol></section></main><script>document.getElementById('print')?.addEventListener('click',()=>window.print());</script></body></html>
+<style>body{font:16px/1.55 system-ui;margin:2rem;background:#fffdf7;color:#112e27}main{max-width:48rem;margin:auto}nav{display:flex;justify-content:space-between;gap:1rem}h1,h2,h3{line-height:1.2}header{padding-top:1rem;border-bottom:1px solid #c9a24a}li{break-inside:avoid}a{color:inherit}button{background:#0e3b34;color:white;border:0;padding:.65rem;font:inherit;cursor:pointer}@media print{body{margin:0;background:white;color:black}nav{display:none}@page{margin:17mm}}</style>

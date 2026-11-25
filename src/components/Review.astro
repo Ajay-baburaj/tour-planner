@@ -1,0 +1,5 @@
+---
+import Photo from './Photo.astro';
+const {review}=Astro.props;
+---
+<figure class="review-card"><div class="review-picture"><Photo image={review.image} alt="" sizes="85px"/></div><div><p class="review-rating" aria-label={`Illustrative rating, ${review.rating} out of 5`}>{'★'.repeat(review.rating)}<span aria-hidden="true">{'☆'.repeat(5-review.rating)}</span></p><blockquote>“{review.text}”</blockquote><figcaption><a href={`/packages/${review.trip}/`}>{review.title}</a> · {review.tag}</figcaption><p class="sample-note">Illustrative traveller story</p></div></figure>

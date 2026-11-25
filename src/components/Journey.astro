@@ -1,0 +1,13 @@
+---
+import Icon from './Icon.astro';
+const stops = [
+ ['Alleppey','Slip away from Punnamada’s jetty and into quiet channels beside the rice fields.'],
+ ['Kumarakom','Pass the edge of a wetland sanctuary, where egrets wade against the reeds.'],
+ ['Vembanad Lake','The narrow waterways open into the lake. Find a seat on deck and watch the light change.'],
+];
+---
+<section class="water-journey" aria-labelledby="journey-title">
+<div class="journey-stage"><div class="shell journey-inner"><div><p class="eyebrow gold-rule">The backwaters</p><h2 id="journey-title">A slower way<br/> <em>through Kerala.</em></h2><p class="subtitle">Follow a traditional kettuvallam from the Kuttanad canals out into open water.</p><a class="button gold" href="/houseboats/">Find a houseboat <Icon name="diagonal" size={16}/></a></div>
+<div class="journey-graphic"><svg viewBox="0 0 650 310" role="img" aria-label="Illustration of a kettuvallam route from Alleppey through Kumarakom to Vembanad Lake"><path class="river-wide" d="M28 245C121 288 140 130 247 153C371 195 366 267 508 157C565 112 560 54 616 43"/><path id="river-line" d="M28 245C121 288 140 130 247 153C371 195 366 267 508 157C565 112 560 54 616 43"/><g fill="#ecd190"><circle cx="28" cy="245" r="6"/><circle cx="349" cy="205" r="6"/><circle cx="616" cy="43" r="6"/></g><g id="moving-boat" transform="translate(28 245)"><path d="M-22 5h44l-7 8h-29z" fill="#261f18" stroke="#e2c382" stroke-width="2"/><path d="M-16 5V1a12 12 0 0 1 12-12H6A12 12 0 0 1 18 1v4z" fill="#c9a24a" stroke="#f4efe3" stroke-width="1.5"/><path d="M-8-5v9m8-11v11m8-9v9" stroke="#0e3b34" stroke-width="2"/></g></svg>
+<div class="journey-stops" role="group" aria-label="Route stops">{stops.map(([name,note],i)=><article><button type="button" data-stop={i} aria-pressed={String(!i)}>{name}</button><p>{note}</p></article>)}</div></div></div></div>
+</section>

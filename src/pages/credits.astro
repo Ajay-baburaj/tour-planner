@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import PageLead from '../components/PageLead.astro';
+import credits from '../data/credits.json';
+import {breadcrumbSchema} from '../data/catalogue';
+---
+<Base title="Photography and film credits" description="Individual photographer, filmmaker and licensing credits for media used on Kasavu Journeys." schema={[breadcrumbSchema(Astro.site,[{name:'Media credits',path:'/credits/'}])]}>
+<PageLead eyebrow="Behind the images" title="Photography & film credits." summary="Photos and films are provided under the Unsplash and Pexels licences. The illustrations, icons and diagram artwork were drawn for this site." crumbs={[{label:'Media credits'}]}/>
+<section class="shell section"><p class="subtitle"><a class="text-link" href="https://www.pexels.com/license/" target="_blank" rel="noopener">Pexels licence</a> · <a class="text-link" href="https://unsplash.com/license" target="_blank" rel="noopener">Unsplash licence</a></p><ul class="credits-list">{credits.map(item=><li><a href={item.url} target="_blank" rel="noopener"><strong>{item.title}</strong> · {item.creator}, {item.provider}</a></li>)}</ul></section>
+</Base>

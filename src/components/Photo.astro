@@ -1,0 +1,6 @@
+---
+const { image, alt='', sizes='(max-width: 640px) 100vw, 50vw', eager=false, class: className='', position='center' } = Astro.props;
+const hero = image === 'hero';
+const primary = hero ? 1280 : 960;
+---
+<img src={`/images/${image}-${primary}.webp`} srcset={(hero ? [720,1280,1920] : [480,960]).map(width=>`/images/${image}-${width}.webp ${width}w`).join(', ')} sizes={sizes} alt={alt} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding={eager ? 'auto' : 'async'} class={className} style={`object-position:${position}`}/>

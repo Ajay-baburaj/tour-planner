@@ -1,0 +1,12 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageLead from '../../components/PageLead.astro';
+import DestinationCard from '../../components/DestinationCard.astro';
+import KeralaMap from '../../components/KeralaMap.astro';
+import {places,breadcrumbSchema} from '../../data/catalogue';
+---
+<Base title="Kerala destinations" description="Explore thirteen Kerala destinations, from Munnar tea estates and Alleppey to Bekal and Poovar." schema={[breadcrumbSchema(Astro.site,[{name:'Destinations',path:'/destinations/'}])]}>
+<PageLead eyebrow="The coast · lowlands · western ghats" title="Where in Kerala?" summary="Choose a stop for the season, the sights, the driving distance from Cochin Airport and private itineraries that include it." crumbs={[{label:'Destinations'}]}/>
+<section class="shell section"><div class="destination-index">{places.map(place=><DestinationCard place={place}/>)}</div></section>
+<section class="shell section related"><KeralaMap/></section>
+</Base>

@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import PageLead from '../components/PageLead.astro';
+import Photo from '../components/Photo.astro';
+import Form from '../components/Form.astro';
+import Icon from '../components/Icon.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import vehicles from '../data/vehicles.json';
+import {breadcrumbSchema} from '../data/catalogue';
+import {site,currency,whatsapp} from '../site.config';
+const categories=['Economy','Premium','Luxury','Tempo Traveller','Coach/Bus'];
+const choices=['Airport transfer','Local sightseeing','Outstation','Multi-day Kerala tour'];
+const services=[
+  ['Airport transfer','Choose Cochin (COK), Thiruvananthapuram (TRV) or Kozhikode (CCJ). Include your flight number and luggage needs.'],
+  ['Local sightseeing','Reserve a driver for a city day. Agree the included hours and kilometres in your quote.'],
+  ['Outstation','Share your pickup, drop-off and any stops. The quote can reflect tolls, parking and applicable driver allowances.'],
+  ['Multi-day Kerala tour','Share overnight stops, group size and luggage. Choose a vehicle with room for the longer hill drives.'],
+];
+---
+<Base title="Kerala taxi rentals" description="Compare Kerala airport transfers, private drivers, SUVs and group coaches. Estimate fares and request a quote." schema={[breadcrumbSchema(Astro.site,[{name:'Taxi rentals',path:'/taxi/'}])]}>
+<PageLead eyebrow="Private drivers · COK / TRV / CCJ" title="Your ride through Kerala." summary="Compare seats, luggage and starting rates for an airport transfer, a day in town or a private multi-day drive." crumbs={[{label:'Taxi rentals'}]}/>
+<section class="shell section booking-layout">
+ <div class="panel"><SectionTitle eyebrow="Choose a service" title="How are you travelling?"/><div class="chips" role="group" aria-label="Taxi services">{services.map(([title],index)=><button type="button" data-service={title} aria-controls={`taxi-service-${index}`} aria-pressed={String(index===0)}>{title}</button>)}</div>{services.map(([title,note],i)=><p class="service-note" id={`taxi-service-${i}`} data-service-note={title} hidden={i!==0}>{note}</p>)}</div>
+ <div class="panel estimator"><h2>Estimate a fare</h2><label>Vehicle<select data-estimate-vehicle>{vehicles.map(car=><option value={car.model} data-rate={car.km} data-minimum={car.minimum} data-bata={car.bata}>{car.model}</option>)}</select></label><label>Distance in kilometres<input type="number" min="1" max="9999" value="100" data-distance/></label><p><output data-fare aria-live="polite">₹1,800</output> indicative fare</p><p class="subtle" data-fare-note>100 km × ₹13 + ₹500 driver bata.</p><p class="subtle">Tolls, parking, tax and minimum-distance rules can affect your quote.</p></div>
+</section>
+<section class="shell section related">
+ <SectionTitle eyebrow="The fleet · 14 example vehicles" title="Find the right fit."/>
+ <div class="chips road-filter" role="group" aria-label="Vehicle category"><button type="button" data-fleet="" aria-pressed="true">All vehicles</button>{categories.map(category=><button type="button" data-fleet={category} aria-pressed="false">{category}</button>)}</div>
+ <p class="list-caption" data-fleet-total role="status">14 vehicles · Representative vehicle photographs</p>
+ <div class="package-grid fleet-grid">{vehicles.map(car=>{
+    const chat=whatsapp(`Hi, I'd like to book a ${car.model} for ${choices[0]} on __. Pickup: __ Drop-off: __`);
+    const email=`mailto:${site.email}?subject=${encodeURIComponent(car.model+' booking enquiry')}&body=${encodeURIComponent('I would like to book '+car.model+'.\nTrip type: \nPickup: \nDrop-off: \nDate: ')}`;
+    return <article class="package-card" data-vehicle-category={car.category}><div class="card-photo"><Photo image={car.image} alt={`Representative ${car.category} vehicle`}/>{car.popular && <span class="card-badge">Popular</span>}</div>
+      <div class="package-body"><p class="eyebrow package-meta">{car.category}</p><h3>{car.model}</h3><p class="package-places"><Icon name="users" size={16}/> {car.seats} passengers · {car.bags} bags · AC</p>
+        <p class="fare-line"><strong>{currency(car.day)}</strong> / day · <strong>{currency(car.km)}</strong> / km</p><p class="subtle">{car.minimum} km daily minimum · {currency(car.bata)} driver bata</p>
+        <div class="booking-card-actions"><button type="button" class="button" data-book-vehicle={car.model}>Select vehicle <Icon name="diagonal" size={15}/></button>{chat && <a class="text-link" href={chat}>WhatsApp</a>}{site.phone && <a class="text-link" href={`tel:${site.phone}`}>Call</a>}{site.email && <a class="text-link" href={email}>Email</a>}</div>
+      </div></article>;
+  })}</div>
+</section>
+<section class="shell section related" id="taxi-booking"><div class="booking-layout"><div><p class="eyebrow gold-rule">Taxi booking enquiry</p><h2>Tell us where<br/> you’re headed.</h2><p class="subtitle">Include pickup and drop-off, bags and any stops. The driver, timing and price are confirmed in the quote.</p></div><div class="panel"><Form id="taxi" context="Kerala taxi rental" kind="taxi" choices={vehicles.map(v=>v.model)} secondary={choices} actionText="Request taxi quote"/></div></div></section>
+<script>import '../scripts/bookings';</script>
+</Base>

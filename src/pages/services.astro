@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import PageLead from '../components/PageLead.astro';
+import Icon from '../components/Icon.astro';
+import {breadcrumbSchema} from '../data/catalogue';
+const list=[
+ ['compass','Private tour itineraries','Multi-stop travel in Kerala plus domestic and international sample itineraries.','/packages/'],
+ ['car','Taxi rentals','Airport transfers, local sightseeing and multi-day travel with a private driver.','/taxi/'],
+ ['boat','Houseboats','Day cruises and private overnight kettuvallams from Alleppey or Kumarakom.','/houseboats/'],
+ ['heart','Honeymoons & weddings','Private trips for two and group transport or room planning around a celebration.','/lp/kerala-honeymoon/'],
+ ['leaf','Hotel booking','Share the places and room requirements you want prioritised in your quote.','/contact/'],
+];
+---
+<Base title="Travel services" description="Private tours, taxi rentals, houseboats, hotel bookings and honeymoon trips from Kochi." schema={[breadcrumbSchema(Astro.site,[{name:'Services',path:'/services/'}])]}>
+<PageLead eyebrow="Private travel from Kochi" title="Build your trip." summary="Book a driver or a boat on its own, or plan a complete itinerary with the stays and transfers included in one quote." crumbs={[{label:'Services'}]}/>
+<section class="shell section services-layout">{list.map(([icon,title,note,url])=><article class="panel"><Icon name={icon} size={28}/><h2>{title}</h2><p>{note}</p><a class="text-link" href={url}>Explore {title.toLowerCase()} <Icon name="diagonal" size={15}/></a></article>)}</section>
+</Base>

@@ -1,0 +1,27 @@
+---
+import Icon from './Icon.astro';
+import {site} from '../site.config';
+const { id, context, kind='trip', choices=[], secondary=[], defaultChoice='', actionText='Send enquiry', thankYou=false } = Astro.props;
+const today = new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kolkata',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+---
+<form class="enquiry-form" data-lead data-kind={kind} action={site.formspree || undefined} method="post" data-context={context} data-whatsapp={site.whatsapp} data-email={site.email} data-thanks={thankYou ? '/thank-you/' : undefined}>
+<fieldset class="lead-fields" disabled={!site.formspree}>
+<input type="hidden" name="Enquiry" value={context}/>
+<div hidden aria-hidden="true"><label>Leave this field blank<input name="_gotcha" tabindex="-1" autocomplete="off"/></label></div>
+<div class="form-fields">
+<label>Full name<input name="Name" autocomplete="name" required placeholder="Your name"/></label>
+<label>Phone<input name="Phone" type="tel" autocomplete="tel" required minlength="7" maxlength="22" placeholder="+91"/></label>
+{!['campaign','callback'].includes(kind) && <label>Email<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required={kind !== 'taxi'}/></label>}
+{kind !== 'callback' && <label>Travel date<input name="Travel date" type="date" min={today} required/></label>}
+{kind === 'taxi' && <><label>Pickup<input name="Pickup" required placeholder="Airport, hotel or address"/></label><label>Drop-off<input name="Drop-off" required placeholder="Town, hotel or address"/></label><label>Pickup time<input name="Pickup time" type="time" required/></label><label>Trip type<select name="Trip type" required>{secondary.map((item: string)=><option>{item}</option>)}</select></label></>}
+{kind !== 'callback' && <label>{kind === 'package' ? 'Adults' : 'Guests'}<input name={kind === 'package' ? 'Adults' : 'Guests'} type="number" min="1" max="60" value="2" required/></label>}
+{kind === 'package' && <label>Children<input name="Children" type="number" min="0" max="59" value="0" required/></label>}
+{choices.length > 0 && <label>{kind === 'taxi' ? 'Vehicle' : kind === 'package' ? 'Hotel tier' : 'Houseboat'}<select name={kind === 'taxi' ? 'Vehicle' : kind === 'package' ? 'Hotel tier' : 'Houseboat'} data-choice>{choices.map((item: string)=><option selected={item===defaultChoice}>{item}</option>)}</select></label>}
+{kind === 'boat' && <label>Cruise<select name="Cruise" data-trip required>{secondary.map((item: string)=><option>{item}</option>)}</select></label>}
+{!['campaign','callback'].includes(kind) && <label class="full">Anything we should know?<textarea name="Message" rows="3" placeholder="Places, interests or any access requirements"></textarea></label>}
+</div>
+<div class="form-actions"><button class="button" type="submit">{site.formspree ? actionText : 'Prepare enquiry'} <Icon name="diagonal" size={16}/></button>{site.whatsapp && <button class="button outline" type="button" data-form-chat><Icon name="chat" size={18}/> Send on WhatsApp</button>}</div>
+</fieldset>
+{!site.formspree && <noscript><p>Enable JavaScript to prepare an enquiry in this preview.</p></noscript>}
+<p class="form-status" role="status" id={`${id}-status`}></p><div class="form-result" hidden><textarea aria-label="Prepared enquiry" rows="6" readonly></textarea><button class="button outline" type="button" data-copy>Copy enquiry</button>{site.whatsapp && <a class="button" data-continue href={`https://wa.me/${site.whatsapp.replace(/\D/g,'')}`} target="_blank" rel="noopener">Continue on WhatsApp</a>}</div>
+</form>

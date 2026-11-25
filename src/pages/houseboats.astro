@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
+import Form from '../components/Form.astro';
+import Icon from '../components/Icon.astro';
+import Crumbs from '../components/Crumbs.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import boats from '../data/houseboats.json';
+import {breadcrumbSchema} from '../data/catalogue';
+import {currency,site,whatsapp} from '../site.config';
+const types=['Luxury','Premium','Deluxe','Honeymoon'];
+const cruises = ['Day cruise','Overnight','Multi-day'];
+const schedule=[
+ ['12:00','Board at the agreed jetty','Meet the crew, leave your bags in the cabin and review the route.'],
+ ['13:00','Lunch as the canals open up','Work with the crew to confirm dietary needs ahead of your trip.'],
+ ['16:00','Tea on deck','Follow the last stretch of the daytime cruise and see village life from the water.'],
+ ['17:30','Moor for the evening','The boat ties up at its assigned mooring. Take a seat on deck as the light changes.'],
+ ['19:30','Dinner aboard','Stay the night on the anchored boat. Cabin AC hours are specified in the quote.'],
+ ['08:00','Breakfast and a short cruise','Return to the jetty after breakfast, subject to the next departure and route conditions.'],
+];
+---
+<Base title="Kerala houseboats" description="Compare luxury, premium, deluxe and honeymoon houseboats in Alleppey and Kumarakom, for day or overnight cruises." image="/images/boat-960.webp" schema={[breadcrumbSchema(Astro.site,[{name:'Houseboats',path:'/houseboats/'}])]}>
+<section class="detail-hero"><Photo image="hero" alt="Palm-lined waterways of Alleppey" eager position="center 64%" sizes="100vw"/><div class="shell"><Crumbs items={[{label:'Houseboats'}]}/><p class="eyebrow gold-rule">Alleppey & Kumarakom</p><h1>A cabin on the water.</h1><p>Take a day cruise through the paddy fields or sleep aboard a private kettuvallam.</p></div></section>
+<section class="shell section">
+<SectionTitle eyebrow="Private kettuvallams" title="Find your boat."/>
+<div class="panel filters"><label>Class<select data-boat-filter="type"><option value="">All classes</option>{types.map(type=><option>{type}</option>)}</select></label><label>Boarding town<select data-boat-filter="base"><option value="">Both towns</option><option>Alleppey</option><option>Kumarakom</option></select></label><label>Cruise<select data-boat-filter="cruises"><option value="">Any cruise</option>{cruises.map(cruise=><option>{cruise}</option>)}</select></label></div>
+<p class="list-caption" data-boat-total role="status">6 example houseboats · Representative backwater photographs</p>
+<p class="status-empty" data-no-boats hidden>No houseboats match. Try a different class, town or cruise length.</p>
+<div class="package-grid">{boats.map(boat=>{
+ const chat=whatsapp(`Hi, I'd like to check ${boat.name} in ${boat.base}. Cruise type: __ Travel date: __ Guests: __`);
+ return <article class="package-card" data-boat-type={boat.type} data-boat-base={boat.base} data-boat-cruises={boat.cruises.join('|')}><div class="card-photo"><Photo image={boat.image} alt={`Backwaters near ${boat.base}`} position="center 70%"/><span class="card-badge">{boat.type}</span></div><div class="package-body"><p class="eyebrow package-meta">{boat.base} · {boat.bedrooms} {boat.bedrooms===1?'bedroom':'bedrooms'} · Up to {boat.guests} guests</p><h3>{boat.name}</h3><p class="subtle boat-copy">{boat.description}</p><p class="fare-line"><strong>{currency(boat.price)}</strong> from, per boat · {boat.cruises.join(' / ')}</p><div class="booking-card-actions"><button class="button" type="button" data-book-boat={boat.name}>Select boat <Icon name="diagonal" size={15}/></button>{chat && <a class="text-link" href={chat}>WhatsApp</a>}{site.phone && <a class="text-link" href={`tel:${site.phone}`}>Call</a>}</div></div></article>;
+})}</div>
+</section>
+<section class="shell section related booking-layout"><div class="article-copy"><h2>What a quote includes</h2><ul><li>Private boat and crew from the agreed jetty</li><li>Cabins as listed, with scheduled AC where specified</li><li>Lunch on day cruises. Overnight trips also include evening tea, dinner and breakfast.</li><li>A route based on weather, jetty access and mooring rules</li></ul><p>Confirm transfers, meal preferences, accessibility and any evening AC needs before boarding.</p></div><div class="article-copy"><h2>A day on the backwaters</h2><ol class="timeline">{schedule.map(([time,name,text])=><li><details class="accordion"><summary>{time} · {name}</summary><p>{text}</p></details></li>)}</ol></div></section>
+<section class="shell section related" id="boat-booking"><div class="booking-layout"><div><p class="eyebrow gold-rule">Houseboat booking enquiry</p><h2>Leave from<br/> the right jetty.</h2><p class="subtitle">Share your preferred town and route, guest count, meal needs and the cruise you have in mind.</p></div><div class="panel"><Form id="houseboat" context="Kerala houseboat" kind="boat" choices={boats.map(boat=>boat.name)} secondary={cruises} actionText="Request boat quote"/><script type="application/json" id="boat-options" set:html={JSON.stringify(boats.map(({name,cruises,guests})=>({name,cruises,guests})))}/></div></div></section>
+<script>import '../scripts/bookings';</script>
+</Base>

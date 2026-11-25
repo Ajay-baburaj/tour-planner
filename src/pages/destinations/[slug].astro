@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+import Crumbs from '../../components/Crumbs.astro';
+import Photo from '../../components/Photo.astro';
+import Icon from '../../components/Icon.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import PackageCard from '../../components/PackageCard.astro';
+import {places,trips,openMap,breadcrumbSchema} from '../../data/catalogue';
+export function getStaticPaths(){return places.map(place=>({params:{slug:place.slug},props:{place}}));}
+const {place}=Astro.props;
+const listing=trips.filter(trip=>trip.route.includes(place.slug));
+const modes:Record<string,string>={munnar:'tea',alleppey:'boat',kumarakom:'boat',thekkady:'canopy',varkala:'cliff',kochi:'nets'};
+const mode=modes[place.slug]||'landscape';
+const drive=new URLSearchParams({api:'1',origin:'Cochin International Airport',destination:`${place.lat},${place.lon}`,travelmode:'driving'});
+---
+<Base title={`${place.name} travel guide & tours`} description={place.summary} image={`/images/${place.image}-960.webp`} schema={[breadcrumbSchema(Astro.site,[{name:'Destinations',path:'/destinations/'},{name:place.name,path:Astro.url.pathname}])]}>
+<section class={`detail-hero destination-hero scene-${mode}`} data-destination-scene>
+<Photo image={place.image} alt={`${place.name}, Kerala`} sizes="100vw" eager position={mode==='boat'?'center 71%':'center 60%'}/>
+{mode!=='landscape' && <svg class="destination-motion-art" viewBox="0 0 560 310" aria-hidden="true">
+ {mode==='tea' && <>{[0,1,2,3,4].map(i=><path data-destination-depth={i+1} d={`M-16 ${215+i*18}Q134 ${117+i*29} 272 ${211+i*20}T589 ${204+i*23}`}/>)}</>}
+ {mode==='boat' && <g data-destination-depth="4"><path d="M272 229h202l-25 20H297zM301 228v-14q48-80 140-6v20m-97-34v35m53-41v41"/><path d="M151 265q81-12 155-1m38 14q97 11 182-1"/></g>}
+ {mode==='canopy' && <g data-destination-depth="5"><path d="M531 0c-38 28-48 124-94 161M465 111c-21-34-57-35-78-7 38-14 52-11 78 7Zm8-24c0-43-26-55-57-44 33 2 48 17 57 44Zm27-57c-36-41-71-32-91-7 41-12 61-7 91 7Z"/></g>}
+ {mode==='cliff' && <g data-destination-depth="3"><circle cx="423" cy="89" r="46"/><path d="M282 167h245m-185 22h188m-151 21h151"/></g>}
+ {mode==='nets' && <g data-destination-depth="4"><path d="M347 267V99m47 166V129m-114-21 146 3 89 114m-205-69 116-45m-49 38 88 82m52-5-123 20-72-67 195 47Zm-191-46 196 46m-129-54 54 64"/></g>}
+</svg>}
+<div class="shell"><Crumbs items={[{label:'Destinations',url:'/destinations/'},{label:place.name}]}/><p class="eyebrow gold-rule">{place.region}</p><h1>{place.name}</h1><span class="destination-ml" lang="ml">{place.malayalam}</span></div>
+</section>
+<section class="shell section detail-layout">
+<article class="article-copy">
+ <h2>Spend time in {place.name}</h2><p>{place.summary}</p>
+ <h2>What to see & do</h2><div class="content-cards">{place.attractions.map((attraction:{title:string;text:string})=><article><h3>{attraction.title}</h3><p>{attraction.text}.</p><a href={openMap(attraction.title+', Kerala')} target="_blank" rel="noopener">Find it on the map</a></article>)}</div>
+ <h2>Where to stay</h2><p>{place.stay}</p>
+</article>
+<aside class="panel sticky-panel"><h2>Before you go</h2><dl class="facts"><dt>Best time to visit</dt><dd>{place.season}</dd><dt>Road distance from COK</dt><dd>About {place.km} km. Route and traffic affect travel time.</dd></dl><a class="text-link" href={`https://www.google.com/maps/dir/?${drive}`} target="_blank" rel="noopener">Directions from Cochin Airport <Icon name="diagonal" size={16}/></a></aside>
+</section>
+<section class="shell section related"><SectionTitle eyebrow="Private itineraries" title={`Tours that include ${place.name}`} link={`/packages/?destination=${place.slug}`} label="Filter the full catalogue"/><div class="package-grid">{listing.map(trip=><PackageCard trip={trip}/>)}</div></section>
+<script>
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches && matchMedia('(min-width: 680px)').matches){
+  const scene=document.querySelector<HTMLElement>('[data-destination-scene]');
+  if(scene) {
+    const photo=scene.querySelector('img');
+    const layers=scene.querySelectorAll<SVGElement>('[data-destination-depth]');
+    let pending=false;
+    addEventListener('scroll',()=>{
+      if(pending) return;
+      pending=true;
+      requestAnimationFrame(()=>{
+        pending=false;
+        const box=scene.getBoundingClientRect();
+        if(box.bottom<0) return;
+        const depth=Math.max(0,Math.min(scene.offsetHeight,-box.top));
+        if(photo) photo.style.transform=`translateY(${depth*.13}px) scale(1.04)`;
+        layers.forEach(layer=>layer.style.transform=`translate(${depth*Number(layer.dataset.destinationDepth)*.036}px,${depth*.065}px)`);
+      });
+    },{passive:true});
+  }
+}
+</script>
+</Base>
